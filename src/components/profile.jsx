@@ -1,8 +1,8 @@
 import "./components.css";
 
-function Profile(){
+function Profile(){    
     return(
-        <div className="py-5 px-3 text-center">
+        <div className={`py-5 px-3 text-center`}>
             <div className="my-5">
                 <img className="rounded-full mx-auto h-[150px] w-[150px]" src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjwRujGBN1FLnqeZdSGYTJg-exZcSy2v7x9A&usqp=CAU' alt="profile picture"></img>
             </div>
@@ -14,10 +14,10 @@ function Profile(){
                 {/* ADD THE LINKS ANIMATION */}
             </div>
             <div className="inline my-[30px]">
-                <a target="_blank" rel="noreferrer" href="https://twitter.com/xh3rking"><i className="fa-brands fa-twitter text-2xl pr-4"></i></a>
-                <a target="_blank" rel="noreferrer" href="https://youtu.be/dQw4w9WgXcQ?si=b8rWPl0lqxxSPXWD"><i className="fab fa-youtube text-xl pr-4"></i></a>
-                <a target="_blank" rel="noreferrer" href="https://github.com/jaarabytes"><i className="fab fa-github text-xl pr-4"></i></a>
-                <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/andole-xavier-a83929287/"><i className="fa-brands fa-linkedin text-xl pr-4"></i></a>
+                <a target="_blank" rel="noreferrer" href="https://twitter.com/xh3rking"><i className="fa-brands fa-twitter text-2xl pr-4 hover:text-neon"></i></a>
+                <a target="_blank" rel="noreferrer" href="https://youtu.be/dQw4w9WgXcQ?si=b8rWPl0lqxxSPXWD"><i className="fab fa-youtube text-xl pr-4 hover:text-neon"></i></a>
+                <a target="_blank" rel="noreferrer" href="https://github.com/jaarabytes"><i className="fab fa-github text-xl pr-4 hover:text-neon"></i></a>
+                <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/andole-xavier-a83929287/"><i className="fa-brands fa-linkedin text-xl pr-4 hover:text-neon"></i></a>
             </div>
         </div>
     )

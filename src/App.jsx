@@ -6,12 +6,21 @@ import Tags from './components/tags'
 import PostsTab from './components/postsTab'
 import { BrowserRouter as Router, Route , Routes } from 'react-router-dom'
 import Error404 from './components/error404'
+import { useDarkModeToggle } from './components/toggleDarkMode'
+import { Responsive } from './components/responsive'
+
 
 function App() {
+  const [darkMode, toggleDarkMode] = useDarkModeToggle();
+  const containerClassName = darkMode ? 'darker' : 'lighter';
+
+  const [isMenuOpen, toggleMenu] = Responsive();
+  const containerResponsive = isMenuOpen ? 'w-96' : 'w-0';
 
   return (
+    <div className={ containerClassName } style={{minHeight:'100vh'}}>
     <Router >
-      <Navbar />
+      <Navbar toggleDarkMode={toggleDarkMode} darkMode={darkMode} className={containerResponsive} />
       <Routes>
         <Route path="/" element={<Profile />} />
         <Route path="/posts" element={<PostsTab />} />
@@ -20,6 +29,7 @@ function App() {
         <Route element={<Error404 />} />
       </Routes>
     </Router>
+    </div>
   )
 }
 export default App;
