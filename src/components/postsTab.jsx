@@ -1,14 +1,14 @@
 import { useSelector, useDispatch } from "react-redux";
 import { selectPost } from "../reducers/postSlice";
-
+import { Link } from "react-router-dom";
 
 const PostsTab = () => {
     const posts = useSelector((state) => state.posts.items);
     const dispatch = useDispatch();
 
-    const handlePostClick = (postId) => {
-        dispatch(selectPost(postId));
-    }
+    // const handlePostClick = (postId) => {
+    //     dispatch(selectPost(postId));
+    // }
 
     return (
         <div className="px-5">
@@ -17,12 +17,13 @@ const PostsTab = () => {
             {posts.map((elem) => (
               <div
                 key={elem.id}
-                className="rounded py-5 p-3 hover:bg-amber-400"
-                onClick={() => handlePostClick(elem.id)}
+                className="rounded py-5 p-3"
               >
-                <h2 className="text-xl font-bold">{elem.header}</h2>
+                <p className="text-2xl font-bold hover:text-red-700">{elem.header}</p>
+                <div className="flex my-3">
                 <p className="text-sm">{elem.date}</p>
-                <p className="text-md">{elem.read}</p>
+                <p className="text-sm px-5">{elem.read}</p>
+                </div>
               </div>
             ))}
           </div>

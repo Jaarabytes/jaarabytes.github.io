@@ -25,6 +25,7 @@ function App() {
         <Route path="/" element={<Profile darkMode={darkMode} />} />
         <Route path="/posts" element={<PostsTab />} />
         <Route path="/posts/:postId" element={<FullPost />} />
+        {/* JUST LIKE THE ABOVE FOR POST ID, CREATE INDIVIDUAL COMPONENTS AND SUGGEST THEIR PATHWAYS. LATER, YOU MIGHT FIGURE OUT A SHORTCUT */}
         <Route path="/about" element={<About />} />
         <Route path="/tags" element={<Tags />} />
         <Route path="*" element={<Error404 />} />
