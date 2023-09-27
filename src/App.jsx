@@ -15,12 +15,11 @@ function App() {
   const containerClassName = darkMode ? 'darker' : 'lighter';
 
   const [isMenuOpen, toggleMenu] = Responsive();
-  const containerResponsive = isMenuOpen ? 'w-96' : 'w-0';
 
   return (
     <div className={ containerClassName } style={{minHeight:'100vh'}}>
     <Router >
-      <Navbar toggleDarkMode={toggleDarkMode} darkMode={darkMode} className={containerResponsive} />
+      <Navbar toggleDarkMode={toggleDarkMode} darkMode={darkMode} isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
       <Routes>
         <Route path="/" element={<Profile />} />
         <Route path="/posts" element={<PostsTab />} />
