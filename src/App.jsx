@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Route , Routes } from 'react-router-dom'
 import Error404 from './components/error404'
 import { useDarkModeToggle } from './components/toggleDarkMode'
 import { Responsive } from './components/responsive'
+import FullPost from './components/fullPost'
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Profile darkMode={darkMode} />} />
         <Route path="/posts" element={<PostsTab />} />
+        <Route path="/posts/:postId" element={<FullPost />} />
         <Route path="/about" element={<About />} />
         <Route path="/tags" element={<Tags />} />
         <Route path="*" element={<Error404 />} />
