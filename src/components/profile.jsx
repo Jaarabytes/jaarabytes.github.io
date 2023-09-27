@@ -1,14 +1,15 @@
 import "./components.css";
+import PropTypes from 'prop-types'
 
-function Profile(){    
+function Profile({darkMode}){    
     return(
         <div className={`py-5 px-3 text-center`}>
             <div className="my-5">
                 <img className="rounded-full mx-auto h-[150px] w-[150px]" src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjwRujGBN1FLnqeZdSGYTJg-exZcSy2v7x9A&usqp=CAU' alt="profile picture"></img>
             </div>
             <div className="my-5">
-                <p className="font-bold text-3xl py-3">Andole Xavier</p>
-                <p className="text-xl py-3">Bug bounty hunter</p>
+                <p className={`font-bold text-3xl py-3 ${darkMode ? 'text-neon' : ''}`}>Andole Xavier</p>
+                <p className={`text-xl py-3 ${darkMode ? "text-red-700" : ''}`}>Bug bounty hunter</p>
                 <p>A train stops at the train station, and a bus stops at the bus station. Well, I have a workstation.</p>
 
                 {/* ADD THE LINKS ANIMATION */}
@@ -21,6 +22,10 @@ function Profile(){
             </div>
         </div>
     )
+}
+
+Profile.propTypes = {
+    darkMode: PropTypes.bool.isRequired
 }
 
 export default Profile;

@@ -21,11 +21,11 @@ function App() {
     <Router >
       <Navbar toggleDarkMode={toggleDarkMode} darkMode={darkMode} isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
       <Routes>
-        <Route path="/" element={<Profile />} />
+        <Route path="/" element={<Profile darkMode={darkMode} />} />
         <Route path="/posts" element={<PostsTab />} />
         <Route path="/about" element={<About />} />
         <Route path="/tags" element={<Tags />} />
-        <Route element={<Error404 />} />
+        <Route path="*" element={<Error404 />} />
       </Routes>
     </Router>
     </div>

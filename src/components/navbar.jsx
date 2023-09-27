@@ -14,12 +14,12 @@ function Navbar({toggleDarkMode, darkMode, toggleMenu, isMenuOpen}){
     // TOGGLE FOR LIGHT AND DARK MODE
     
     return(
-        <nav className={`p-4 flex justify-between items-center sticky top-0 shadow-lg z-100`}>
+        <nav className={`p-4 flex justify-between items-center sticky top-0 shadow-lg z-50 ${darkMode ? 'bg-black' : 'bg-white'}`}>
 
             {/* {DESKTOP VERSION STARTS HERE} */}
 
             {/* {SHANKS IMAGE} */}
-            <button className="inline-flex items-center sm:hidden"
+            <button className="inline-flex items-center"
             onClick={toggleDarkMode}
             >
                 <i className={`${darkMode ? 'fa-solid fa-moon' : 'fa-solid fa-sun'} hover:text-neon text-3xl`}></i>
@@ -61,6 +61,7 @@ function Navbar({toggleDarkMode, darkMode, toggleMenu, isMenuOpen}){
               <Link
                 to={navLinks[elem]} 
                 className="text-xl text-white hover:underline hover:text-neon"
+                onClick={toggleMenu}
               >
                 {elem}
               </Link>

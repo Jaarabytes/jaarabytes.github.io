@@ -1,4 +1,4 @@
-
+import React from "react";
 const About = () => {
     const skills = [
         {
@@ -23,10 +23,10 @@ const About = () => {
             <h1 className="text-3xl font-extrabold">Skills:</h1>
             <dl>
                 {skills.map((elem, index) => (
-                    <>
-                    <dt key={index} className="text-xl py-3 font-semibold">{elem.type}</dt>
-                    <dd key={elem} className="text-lg py-2 text-red-400">{elem.tools}</dd>
-                    </>
+                    <React.Fragment key={index}>
+                    <dt className="text-xl py-3 font-semibold">{elem.type}</dt>
+                    <dd className="text-lg py-2 text-red-400">{elem.tools}</dd>
+                    </React.Fragment>
                 ))}
             </dl>
             
