@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(rootElement);
 
 root.render(
   <React.StrictMode>
-    <Provider store={store}> {/* Wrap your App component with Provider */}
+    <Provider store={store}>
       <App />
     </Provider>
   </React.StrictMode>
