@@ -10,7 +10,7 @@ color: rgb(148, 87, 235);
 /* variables.css */
 
 .darker{
-@apply bg-black text-gray-400; 
+@apply bg-gray-900 text-gray-400; 
 }
 .lighter{
 @apply bg-white text-slate-800;

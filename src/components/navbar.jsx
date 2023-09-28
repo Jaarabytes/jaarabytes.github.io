@@ -14,7 +14,7 @@ function Navbar({toggleDarkMode, darkMode, toggleMenu, isMenuOpen}){
     // TOGGLE FOR LIGHT AND DARK MODE
     
     return(
-        <nav className={`p-4 flex justify-between items-center sticky top-0 shadow-lg z-50 ${darkMode ? 'bg-black' : 'bg-white'}`}>
+        <nav className={`p-4 flex justify-between items-center sticky top-0 shadow-lg z-50 ${darkMode ? 'bg-gray-900' : 'bg-white'}`}>
 
             {/* {DESKTOP VERSION STARTS HERE} */}
 
