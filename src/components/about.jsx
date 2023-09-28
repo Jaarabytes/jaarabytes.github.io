@@ -3,7 +3,7 @@ const About = () => {
     const skills = [
         {
             type:"Front end web development:",
-            tools:["HTML5, ","CSS, ", "Sass, ", "Javascript, ", "JQuery, ", "React, ", "Svelte, ", "Redux, ", "Bootstrap, ", "Tailwind"]
+            tools:["HTML5, ","CSS, ", "Sass, ", "Javascript, ", "JQuery, ", "React, ", "Svelte, ", "Bootstrap, ", "Tailwind"]
         },
         {
             type: "Data structures and algorithms(I'm still studying lol 😊):",

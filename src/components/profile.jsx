@@ -9,7 +9,7 @@ function Profile({darkMode}){
             </div>
             <div className="my-5">
                 <p className={`font-bold text-3xl py-3 ${darkMode ? 'text-neon' : ''}`}>Andole Xavier</p>
-                <p className={`text-xl py-3 ${darkMode ? "text-red-700" : ''}`}>Bug bounty hunter</p>
+                <p className={`text-xl py-3 ${darkMode ? "text-red-700" : ''}`}>Elbaf warrior</p>
                 <p>A train stops at the train station, and a bus stops at the bus station. Well, I have a workstation.</p>
 
                 {/* ADD THE LINKS ANIMATION */}

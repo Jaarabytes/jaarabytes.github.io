@@ -4,7 +4,7 @@ const Error404 = () => {
         <div className="text-center">
             <h1 className="text-3xl font-bold py-5">ERROR!</h1>
             <h1 className="text-3xl font-bold py-5">Page not found! 😞</h1>
-            <p className="text-xl py-5">The page you clicked does not exist. Still, you can head back to the <a href="./posts" className="text-red-400">posts</a> for some wholesome content</p>
+            <p className="text-xl py-5">The page you clicked does not exist. Still, you can head back to the <a href="/posts" className="text-red-400">posts</a> for some wholesome content</p>
         </div>
     )
 }

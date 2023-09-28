@@ -8,13 +8,14 @@ import { BrowserRouter as Router, Route , Routes } from 'react-router-dom'
 import Error404 from './components/error404'
 import { useDarkModeToggle } from './components/toggleDarkMode'
 import { Responsive } from './components/responsive'
-import FullPost from './components/fullPost'
-
+import Post1 from '../public/posts/post1'
 
 function App() {
+  // TOGGLING BETWEEN LIGHT AND DARK MODE
   const [darkMode, toggleDarkMode] = useDarkModeToggle();
   const containerClassName = darkMode ? 'darker' : 'lighter';
 
+  // FOR RESPONSIVENESS
   const [isMenuOpen, toggleMenu] = Responsive();
 
   return (
@@ -23,8 +24,8 @@ function App() {
       <Navbar toggleDarkMode={toggleDarkMode} darkMode={darkMode} isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
       <Routes>
         <Route path="/" element={<Profile darkMode={darkMode} />} />
-        <Route path="/posts" element={<PostsTab />} />
-        <Route path="/posts/:postId" element={<FullPost />} />
+        <Route path="/posts" element={<PostsTab darkMode={darkMode} />} />
+        <Route path={`/posts/starting-in-tech`} element={<Post1 />} />
         {/* JUST LIKE THE ABOVE FOR POST ID, CREATE INDIVIDUAL COMPONENTS AND SUGGEST THEIR PATHWAYS. LATER, YOU MIGHT FIGURE OUT A SHORTCUT */}
         <Route path="/about" element={<About />} />
         <Route path="/tags" element={<Tags />} />
