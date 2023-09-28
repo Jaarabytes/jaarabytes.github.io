@@ -9,6 +9,7 @@ import Error404 from './components/error404'
 import { useDarkModeToggle } from './components/toggleDarkMode'
 import { Responsive } from './components/responsive'
 import Post1 from '../public/posts/post1'
+import Footer from './components/footer'
 
 function App() {
   // TOGGLING BETWEEN LIGHT AND DARK MODE
@@ -31,6 +32,7 @@ function App() {
         <Route path="/tags" element={<Tags />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
+      <Footer />
     </Router>
     </div>
   )

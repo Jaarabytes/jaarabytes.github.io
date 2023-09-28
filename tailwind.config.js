@@ -1,5 +1,5 @@
-/** @type {import('tailwindcss').Config} */
-export default {
+// tailwind.config.js
+module.exports = {
   content: [
     "./index.html",
     "./src/**/*.{jsx,js,ts,tsx}"
@@ -7,12 +7,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        "neon" : "rgb(57, 255, 20)",
-        "blackpen" : "#333333",
-        "whitepen" : "#ffffff"
+        neon: "rgb(57, 255, 20)",
+        blackpen: "#333333",
+        whitepen: "#ffffff"
       }
     },
   },
-  plugins: [],
-}
-
+  plugins: [
+    require('@tailwindcss/forms')
+  ]
+};
