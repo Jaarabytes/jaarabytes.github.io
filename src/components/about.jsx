@@ -7,7 +7,7 @@ const About = () => {
         },
         {
             type: "Data structures and algorithms(I'm still studying lol 😊):",
-            tools: ["C, ", "Python, ", "Php"]
+            tools: ["Bash, ", "Python, ", "Java"]
         }
     ];
 
@@ -30,11 +30,6 @@ const About = () => {
                 ))}
             </dl>
             
-            <h1 className="text-3xl font-bold my-5">Education:</h1>
-            <h1 className="py-3">Mount Kenya University</h1>
-            <p className="py-3">Bachelor of Commerce and Finance</p>
-            <p className="py-3">2023-2026</p>
-            <h1 className="text-3xl font-bold my-5">Certifications:</h1>
             {certifications.map((val, index) => (
                 <>
                 <p key={index} className="text-2xl py-3 font-semibold">{val.name}</p>
