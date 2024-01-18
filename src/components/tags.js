@@ -1,4 +1,3 @@
-
 const Tags = () => {
     return(
         <div className="mt-5 px-5">
