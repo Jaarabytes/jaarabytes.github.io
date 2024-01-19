@@ -1,12 +1,11 @@
 import "./components.css";
 import PropTypes from 'prop-types'
-import myImage from '../assets/xxBmTs1i.jpeg'
 
 function Profile({darkMode}){    
     return(
         <div className={`py-5 px-3 text-center`}>
             <div className="my-5">
-                <img className="rounded-full mx-auto h-[150px] w-[150px]" src={myImage} alt="profile picture"></img>
+                <img className="rounded-full mx-auto h-[150px] w-[150px]" src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9_u6JRQ4BfDWd6vqDVoDQOHuudszeXscZNA&usqp=CAU' alt="profile picture"></img>
             </div>
             <div className="my-5">
                 <p className={`font-bold text-3xl py-3 ${darkMode ? 'text-neon' : ''}`}>XCII</p>
