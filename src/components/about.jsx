@@ -3,11 +3,11 @@ const About = () => {
     const skills = [
         {
             type:"Front end web development:",
-            tools:["HTML5, ","CSS, ", "Sass, ", "Javascript, ", "JQuery, ", "React, ", "Svelte, ", "Bootstrap, ", "Tailwind"]
+            tools:["HTML5, ","CSS, ", "Sass, ", "Javascript, ", "Typescript, " , "JQuery, ", "React, ", "Svelte, ", "Bootstrap, ", "Tailwind"]
         },
         {
             type: "Proficient in:",
-            tools: ["Bash, ", "Python, ", "Java", "C", "Solidity"]
+            tools: ["Bash, ", "Python, ", "Java, ", "C, ", "Solidity"]
         }
     ];
 

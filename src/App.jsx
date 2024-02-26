@@ -9,6 +9,7 @@ import Error404 from './components/error404'
 import { useDarkModeToggle } from './components/toggleDarkMode'
 import { Responsive } from './components/responsive'
 import Post1 from '../public/posts/post1'
+import Post2 from '../public/posts/post2'
 import Footer from './components/footer'
 
 function App() {
@@ -26,11 +27,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Profile darkMode={darkMode} />} />
         <Route path="/posts" element={<PostsTab darkMode={darkMode} />} />
-        <Route path={`/posts/starting-in-tech`} element={<Post1 />} />
+        <Route path={`/posts/starting-in-tech`} element={<Post1 darkMode={darkMode} />} />
+        <Route path={`/posts/git-rid-of-it`} element={<Post2 darkMode={darkMode} />} />
         {/* JUST LIKE THE ABOVE FOR POST ID, CREATE INDIVIDUAL COMPONENTS AND SUGGEST THEIR PATHWAYS. LATER, YOU MIGHT FIGURE OUT A SHORTCUT */}
-        <Route path="/about" element={<About />} />
-        <Route path="/tags" element={<Tags />} />
-        <Route path="*" element={<Error404 />} />
+        <Route path="/about" element={<About darkMode={darkMode} />} />
+        <Route path="/tags" element={<Tags darkMode={darkMode} />} />
+        <Route path="*" element={<Error404 darkMode={darkMode} />} />
       </Routes>
       <Footer />
     </Router>

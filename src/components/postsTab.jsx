@@ -1,26 +1,32 @@
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 
-const PostsTab = ({darkMode}) => {
+const PostsTab = ({darkMode, Responsive, toggleMenu, isMenuOpen}) => {
     // NAVIGATION LINKS AND PROPERTIES FOR EVERY BLOG POST I HAVE WRITTEN
     const posts = [
       {
         id:1,
-        header: "Starting in tech",
+        header: "Reminder to self",
         path: "starting-in-tech",
         date: "27th September 2023",
         read: "2 min",
-        tags: ["newbie ", 'beginner-friendly ', ' career-advice']
+      },
+      {
+      id:2,
+      header: "Git rid of it",
+      path: "git-rid-of-it",
+      date: "14th February 2024",
+      read: "5 min"
       }
     ]
     return (
       <>
-        <h1 className="text-3xl bold my-5 text-center">Posts:</h1>
-        <div className="flex place-items-center justify-center">
-            {posts.map((elem) => (
+        <h1 className={`text-3xl bold my-5 ${Responsive ? '' : 'pl-96'}`}><b>Posts:</b></h1>
+        <div className={`block w-3/5 ${Responsive ? '' : 'pl-96'}`}>
+            {posts.reverse().map((elem) => (
               <div
                 key={elem.id}
-                className={`${darkMode ? 'bg-gray-600' : ' bg-gray-300'} rounded-lg p-5 sm:w-[60%] w-[90%] transform hover:scale-110 transition-transform duration-300 ease-in-out`}
+                className={`${darkMode ? '' : ''} py-2`}
               >
               
                 <Link to={`/posts/${elem.path}`}
@@ -31,12 +37,7 @@ const PostsTab = ({darkMode}) => {
                 <p className="text-xs">{elem.date}</p>
                 <p className="text-xs px-5">{elem.read}</p>
                 </div>
-                {/* MAP THE TAGS IF POSSILE */}
                 <div className="flex flex-wrap flex-row justify-start">
-                {elem.tags.map((values) => (
-                  <p className={`text-xs m-2 px-2 ${darkMode ? 'bg-green-700 rounded-lg text-neon' : 'bg-gray-500 rounded-lg'}`}
-                   key={values}>{values}</p>
-                ))}
                 </div>
               </div>
             ))}
@@ -45,8 +46,9 @@ const PostsTab = ({darkMode}) => {
       );
 }
 PostsTab.propTypes = {
-  darkMode: PropTypes.bool.isRequired
+  darkMode: PropTypes.bool.isRequired,
+  toggleDarkMode: PropTypes.func.isRequired,
+  toggleMenu: PropTypes.func.isRequired,
+  isMenuOpen: PropTypes.bool.isRequired
 }
-
-
 export default PostsTab;
