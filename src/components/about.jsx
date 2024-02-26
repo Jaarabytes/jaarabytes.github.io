@@ -6,8 +6,8 @@ const About = () => {
             tools:["HTML5, ","CSS, ", "Sass, ", "Javascript, ", "JQuery, ", "React, ", "Svelte, ", "Bootstrap, ", "Tailwind"]
         },
         {
-            type: "Data structures and algorithms(I'm still studying lol 😊):",
-            tools: ["Bash, ", "Python, ", "Java"]
+            type: "Proficient in:",
+            tools: ["Bash, ", "Python, ", "Java", "C", "Solidity"]
         }
     ];
 
