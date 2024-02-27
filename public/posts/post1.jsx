@@ -49,7 +49,7 @@ function Post1({darkMode}){
         },
         {
             "tag" : "Error-based-SQLi",
-            "img-path" : "./Screenshot_2024-02-13_15_47_11.png",
+            "img-path" : "./Screenshot_2024-02-13_15_47_12.png",
             "alt" : "Error based SQLi captured in Burp Suite repeater, rendered tab",
             "about" : "An 'error based SQL injection' which turned out to be poor error handling on the PHP backend(This was revealed due to laravel syntax)."
         }
