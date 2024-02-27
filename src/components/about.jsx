@@ -6,7 +6,7 @@ const About = () => {
             tools:["HTML5, ","CSS, ", "Sass, ", "Javascript, ", "Typescript, " , "JQuery, ", "React, ", "Svelte, ", "Bootstrap, ", "Tailwind"]
         },
         {
-            type: "Proficient in:",
+            type: "Programming languages:",
             tools: ["Bash, ", "Python, ", "Java, ", "C, ", "Solidity"]
         }
     ];
@@ -16,10 +16,11 @@ const About = () => {
             name: "Javascript Algorithms and data structures",
             provider: "Free Code Camp",
             link : "https://www.freecodecamp.org/certification/XavierAndole/javascript-algorithms-and-data-structures",
+            date : "1st August 2023"
         }
     ]
     return(
-        <div className="my-5 px-5">
+        <div className="px-5 my-5 sm:px-[20%]">
             <h1 className="text-3xl font-extrabold">Skills:</h1>
             <dl>
                 {skills.map((elem, index) => (
@@ -29,12 +30,13 @@ const About = () => {
                     </React.Fragment>
                 ))}
             </dl>
-            
+            <br></br>
+            <h1 className="text-3xl font-extrabold py-5">Certifications: </h1>
             {certifications.map((val, index) => (
                 <>
-                <p key={index} className="text-2xl py-3 font-semibold">{val.name}</p>
-                <p key={val} className="text-lg py-2">{val.provider}</p>
-                <a href={val.link} target="_blank" rel="noreferrer" className="text-red-400 py-2">See credential</a>
+                <p key={index} className="text-xl font-semibold">{val.name}</p>
+                <a href={val.link} target="_blank" rel="noreferrer" className="text-red-400 py-2" key={val}>{val.provider}</a>
+                <p>{val.date}</p>
                 </>
             ))}
             {/* DISPLAY CERTIFICATIONS HERE */}

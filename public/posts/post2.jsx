@@ -1,6 +1,4 @@
 import PropTypes from "prop-types";
-
-
 function Post2({darkMode}){
     return(
         <>
@@ -16,6 +14,7 @@ function Post2({darkMode}){
         {/* Insert the image here */}
         <img src="./Screenshot_2024-02-26_13_54_28.jpg" className= 'my-5' alt="git error that prompts for authentication"></img>
         <p>I have encountered this multiple times and I finally figured it out</p>
+        <br></br>
         {/* Insert the nerd gif here */}
         <img src='./icegif-777.gif' alt="Nerd emoji gif"></img>
         <br></br>
