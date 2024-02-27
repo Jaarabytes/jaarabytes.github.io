@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 
-const PostsTab = ({darkMode, Responsive, toggleMenu, isMenuOpen}) => {
+const PostsTab = ({darkMode}) => {
     // NAVIGATION LINKS AND PROPERTIES FOR EVERY BLOG POST I HAVE WRITTEN
     const posts = [
       {
@@ -21,12 +21,12 @@ const PostsTab = ({darkMode, Responsive, toggleMenu, isMenuOpen}) => {
     ]
     return (
       <>
-        <h1 className={`text-3xl bold my-5 ${Responsive ? '' : 'pl-96'}`}><b>Posts:</b></h1>
-        <div className={`block w-3/5 ${Responsive ? '' : 'pl-96'}`}>
+        <h1 className={`text-3xl bold my-5 mx-5 sm:px-[20%]`}><b>Posts:</b></h1>
+        <div className={`mx-5 py-5 block sm:px-[20%]`}>
             {posts.reverse().map((elem) => (
               <div
                 key={elem.id}
-                className={`${darkMode ? '' : ''} py-2`}
+                className={`py-2`}
               >
               
                 <Link to={`/posts/${elem.path}`}
@@ -47,8 +47,5 @@ const PostsTab = ({darkMode, Responsive, toggleMenu, isMenuOpen}) => {
 }
 PostsTab.propTypes = {
   darkMode: PropTypes.bool.isRequired,
-  toggleDarkMode: PropTypes.func.isRequired,
-  toggleMenu: PropTypes.func.isRequired,
-  isMenuOpen: PropTypes.bool.isRequired
 }
 export default PostsTab;

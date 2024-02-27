@@ -16,7 +16,6 @@ function App() {
   // TOGGLING BETWEEN LIGHT AND DARK MODE
   const [darkMode, toggleDarkMode] = useDarkModeToggle();
   const containerClassName = darkMode ? 'darker' : 'lighter';
-
   // FOR RESPONSIVENESS
   const [isMenuOpen, toggleMenu] = Responsive();
 

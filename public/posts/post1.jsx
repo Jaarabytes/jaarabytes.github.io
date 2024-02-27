@@ -1,13 +1,58 @@
+import Proptypes from 'prop-types';
 
-function Post1(){
+function Post1({darkMode}){
+    const codeSnippets = [
+        {
+           "code" :  `
+        const stringToNumber = function(str){
+        return Number(str);
+        }
+        `
+        },
+        {
+            "code" : `
+        const stringToNumber = function(str){
+        return +(str);
+        }
+        `
+        },
+        {
+        "code" : `
+        const stringToNumber = function(str){
+        return parseInt(str);
+        }
+        `
+    }
+    ];
     return(
-        <div className="px-5">
-        <h1 className="text-3xl">Getting started in Tech</h1>
-        <p>*Scratch that, well you're probably wondering how I ended up in this situation*</p>
+        <div className="px-5 my-5 sm:px-[20%]">
+        <h1 className="text-3xl font-extrabold my-5"><b>Getting started in Tech</b></h1>
+
+        <p>*This is just my journey, it is unnecessary for your reading*</p>
         <br></br>
         <br></br>
         <p>This is just a reminder to keep upskilling and improving. It contains dates on what I did(This was written on 29Th September 2023)
         </p>
+        <br></br>
+        <p>Learnt HTML, CSS and Javascript during January and February 2023</p>
+        <br></br>
+        <p>Sharpened my Javascript skills through 
+        <a className={`${darkMode ? 'text-red-400' : 'text-red-400' }`} href='https://www.codewars.com/users/Jaarabits' target='_blank'> codewars</a>.
+        This was done everyday throughout March, April to May. I remember the first day when the
+        challenge was simple 8kyu (this is termed as a simple challenge and is awarded 2 points) which was to 
+        convert a string to a number. I remembered that it was the simple <code>parseInt(&lt;string_name&gt;)</code>
+        However I was wrong. Here, you can try the 
+        <a className={`${darkMode ? 'text-red-400' : 'text-red-400' }`} href='https://www.codewars.com/kata/544675c6f971f7399a000e79/train/javascript' target='_blank'> challenge </a>
+        yourself</p>
+        <br></br>
+        <p>The rush of dopamine in my brain, when I saw the webpage turn green and the message, you
+            have passed all the tests. Sorry for the touching story, here are other ways to do it:
+        </p>
+        {codeSnippets.map( elem =>
+             <pre  className='bg-slate-900'><code>{elem.code}</code></pre>
+             )}
+        <br></br>
+        <p>This website was created using React, vite and Tailwind CSS through the days of 21 st September to 25th September 2023</p>
         <br></br>
         <p>Got rid of windows and installed Ubuntu. Also started learning linux.(It's 27th September 2023)</p>
         <br></br>
@@ -19,7 +64,12 @@ function Post1(){
         <p>An 'error based SQL injection' which turned out to be poor error handling on the PHP backend(This was revealed due to laravel syntax).</p>
         <br></br>
         <p>Started learning web3 and smart contracts with hope to earn as an auditor and bug hunter for both web2 and web3 (22nd February 2024)</p>
+        <p>Shout out to <a className={`${darkMode ? 'text-red-400' : 'text-red-400' }`} href="https://www.youtube.com/c/PatrickCollins">Patrick Collins </a>,
+        <a className={`${darkMode ? 'text-red-400' : 'text-red-400' }`} href='https://updraft.cyfrin.io/' target='_blank'> cyfrin</a> and the team</p>
         </div>
     )
 }
 export default Post1;
+Post1.Proptypes = {
+darkMode :  Proptypes.bool.isRequired
+}
