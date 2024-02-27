@@ -7,21 +7,24 @@ function Post1({darkMode}){
         const stringToNumber = function(str){
         return Number(str);
         }
-        `
+        `,
+        "id": 1
         },
         {
             "code" : `
         const stringToNumber = function(str){
         return +(str);
         }
-        `
+        `,
+        "id" : 2
         },
         {
         "code" : `
         const stringToNumber = function(str){
         return parseInt(str);
         }
-        `
+        `,
+        "id" : 3
     }
     ];
     const mergeArrays = [
@@ -30,24 +33,28 @@ function Post1({darkMode}){
         function mergeArrays(a, b) {
         return Array.from(new Set(a.concat(b))).sort((a,b)=>a-b);
         }
-        ` 
+        ` ,
+        "id" : 1
         },
         {
         "code" : `
         function mergeArrays(a, b) {
         return [...new Set(a.concat(b))].sort((a,b)=>a-b);
         }
-        ` 
+        ` ,
+        "id" : 2
         }
     ];
     const vulnerabilities = [
         {
+            "id" : 1,
             "tag" : "Xss-on-chatbot",
             "img-path" : "./Screenshot_2024-02-27_12_35_50.png",
             "alt" : "HTML injection to Self-XSS inside web chatbot",
             "about" : "HTML injection and Cross Site Scripting on a webchat bot. This however is not vulnerability since no victim is involved."
         },
         {
+            "id" : 2,
             "tag" : "Error-based-SQLi",
             "img-path" : "./Screenshot_2024-02-13_15_47_12.png",
             "alt" : "Error based SQLi captured in Burp Suite repeater, rendered tab",
@@ -84,13 +91,13 @@ function Post1({darkMode}){
             have passed all the tests. Sorry for the touching story, here are other ways to do it:
         </p>
         {stringToNumber.map( elem =>
-             <pre className='bg-slate-900'><code>{elem.code}</code></pre>
+             <pre className='bg-slate-900'><code key={elem.id}>{elem.code}</code></pre>
              )}
         <br></br>
         <p>Also related, the common question on how to merge two arrays without duplicates. Here are some solutions: </p>
         <br></br>
         {mergeArrays.map(elem => 
-        <pre><code>{elem.code}</code></pre>
+        <pre><code key={elem.id}>{elem.code}</code></pre>
         )}
          <p>Here, you can try the 
         <a className={`${darkMode ? 'text-red-400' : 'text-red-400' }`} href='https://www.codewars.com/kata/573f5c61e7752709df0005d2/train/javascript' target='_blank'> challenge </a>
@@ -116,14 +123,14 @@ function Post1({darkMode}){
         <>
         <p>{elem.about}</p>
         <br></br>
-        <img src={elem['img-path']}></img>
+        <img src={elem['img-path']} key={elem.id}></img>
         <br></br>
         </>
         )}
         <br></br>
-        <p>Learn java after the below Twitter post from a friend angered me. (27th January 2024)</p>
+        <p>Learnt java after the below Twitter post from a friend angered me. (27th January 2024)</p>
         <br></br>
-        <p><b>Translation:</b> After you have finished studying Ruby, Javascript and Python, go back to class and learn some serious like Java</p>
+        <p><b>Translation:</b> After you have finished studying Ruby, Javascript and Python, go back to class and learn something serious like Java</p>
         <br></br>
         <img src='./Screenshot_2024-02-27_14_55_41.png'></img>
         <br></br>
@@ -135,7 +142,8 @@ function Post1({darkMode}){
         </div>
     )
 }
-export default Post1;
 Post1.Proptypes = {
-darkMode :  Proptypes.bool.isRequired
-}
+    darkMode :  Proptypes.bool.isRequired
+  }
+
+export default Post1;

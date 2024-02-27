@@ -90,7 +90,7 @@ function Post2({darkMode}){
         <br></br>
         <p>There you go! You didn't procastinate, Hurray!!!</p>
         <br></br>
-        <p>From thereon, I believe there will be minimal issues encountered however what if you cloned the repository using the http client
+        <p>From there on, I believe there will be minimal issues encountered however what if you cloned the repository using the http client
             but now cannot authenticate? Don't fret.
         </p>
         <br></br>
@@ -112,7 +112,7 @@ function Post2({darkMode}){
 }
 
 Post2.propTypes = {
-    Post2 : propTypes.bool.isRequired
+    darkMode : propTypes.bool.isRequired
 }
 
 export default Post2;

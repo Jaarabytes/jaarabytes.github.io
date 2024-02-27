@@ -2,10 +2,12 @@ import React from "react";
 const About = () => {
     const skills = [
         {
+            id : "front-end",
             type:"Front end web development:",
             tools:["HTML5, ","CSS, ", "Sass, ", "Javascript, ", "Typescript, " , "JQuery, ", "React, ", "Svelte, ", "Bootstrap, ", "Tailwind"]
         },
         {
+            id : "programming-languages",
             type: "Programming languages:",
             tools: ["Bash, ", "Python, ", "Java, ", "C, ", "Solidity"]
         }
@@ -13,6 +15,7 @@ const About = () => {
 
     const certifications = [
         {
+            id : 1,
             name: "Javascript Algorithms and data structures",
             provider: "Free Code Camp",
             link : "https://www.freecodecamp.org/certification/XavierAndole/javascript-algorithms-and-data-structures",
@@ -24,8 +27,8 @@ const About = () => {
             <h1 className="text-3xl font-extrabold">Skills:</h1>
             <dl>
                 {skills.map((elem, index) => (
-                    <React.Fragment key={index}>
-                    <dt className="text-xl py-3 font-semibold">{elem.type}</dt>
+                    <React.Fragment>
+                    <dt className="text-xl py-3 font-semibold" key={index}>{elem.type}</dt>
                     <dd className="text-lg py-2 text-red-400">{elem.tools}</dd>
                     </React.Fragment>
                 ))}
