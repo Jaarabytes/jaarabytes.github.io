@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 
 const PostsTab = ({darkMode}) => {
     // NAVIGATION LINKS AND PROPERTIES FOR EVERY BLOG POST I HAVE WRITTEN
@@ -46,6 +46,6 @@ const PostsTab = ({darkMode}) => {
       );
 }
 PostsTab.propTypes = {
-  darkMode: PropTypes.bool.isRequired,
+  darkMode: propTypes.bool.isRequired,
 }
 export default PostsTab;

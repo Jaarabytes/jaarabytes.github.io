@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 function Post2({darkMode}){
     return(
         <>
@@ -111,8 +111,8 @@ function Post2({darkMode}){
     )
 }
 
-Post2.PropTypes = {
-    Post2 : PropTypes.bool.isRequired
+Post2.propTypes = {
+    Post2 : propTypes.bool.isRequired
 }
 
 export default Post2;

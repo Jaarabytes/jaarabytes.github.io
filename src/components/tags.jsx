@@ -1,11 +1,11 @@
-import Proptypes from 'prop-types';
+import proptypes from 'prop-types';
 import {Link} from 'react-router-dom';
 //Tags folder is under the public directory, same as posts. Do the necessary buddy.
 const Tags = ({darkMode}) => {
     const tags = [
         {
             "tag" : ["git"],
-            "path" : 'git'
+            "path" : 'git/git'
         }
     ];
     // DO THIS, create a tags tab like when you created a posts folder, but for  tags but when clicked should redirect to the post
@@ -23,8 +23,8 @@ const Tags = ({darkMode}) => {
         </div>
     )
 }
-Tags.Proptypes = {
-    darkMode : Proptypes.bool.isRequired
+Tags.proptypes = {
+    darkMode : proptypes.bool.isRequired
 }
 
 export default Tags;

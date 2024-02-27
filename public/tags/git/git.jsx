@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom";
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 
-const gitTag = ({darkMode}) => {
+const GitTag = ({darkMode}) => {
     const gitPosts = [
       {
-      id:2,
+      id:1,
       header: "Git rid of it",
       path: "git-rid-of-it",
       date: "14th February 2024",
       read: "5 min"
       }
-    ]
+    ];
     return (
       <>
         <h1 className={`text-3xl bold my-5 mx-5 sm:px-[20%]`}><b>Posts:</b></h1>
@@ -37,8 +37,8 @@ const gitTag = ({darkMode}) => {
         </>
       );
 }
-gitTag.propTypes = {
-  darkMode: PropTypes.bool.isRequired
+GitTag.propTypes = {
+  darkMode: propTypes.bool.isRequired
 }
 
-export default gitTag;
+export default GitTag;
