@@ -4,43 +4,45 @@ function Post1({darkMode}){
     const stringToNumber = [
         {
            "code" :  `
-        const stringToNumber = function(str){
-        return Number(str);
-        }
+const stringToNumber = function(str){
+return Number(str);
+}
         `,
         "id": 1
         },
         {
             "code" : `
-        const stringToNumber = function(str){
-        return +(str);
-        }
+const stringToNumber = function(str){
+return +(str);
+}
         `,
         "id" : 2
         },
         {
         "code" : `
-        const stringToNumber = function(str){
-        return parseInt(str);
-        }
-        `,
+const stringToNumber = function(str){
+return parseInt(str);
+}
+       `,
         "id" : 3
     }
     ];
     const mergeArrays = [
         {
         "code" : `
-        function mergeArrays(a, b) {
-        return Array.from(new Set(a.concat(b))).sort((a,b)=>a-b);
-        }
+function mergeArrays(a, b) {
+return Array.from(new Set(a.concat(b)))
+            .sort((a,b)=>a-b);
+}
         ` ,
         "id" : 1
         },
         {
         "code" : `
-        function mergeArrays(a, b) {
-        return [...new Set(a.concat(b))].sort((a,b)=>a-b);
-        }
+function mergeArrays(a, b) {
+return [...new Set(a.concat(b))]
+        .sort((a,b)=>a-b);
+}
         ` ,
         "id" : 2
         }
@@ -74,17 +76,16 @@ function Post1({darkMode}){
         <p>Learnt HTML, CSS and Javascript during January and February 2023</p>
         <br></br>
         <p>Sharpened my Javascript skills through 
-        <a className={`${darkMode ? 'text-red-400' : 'text-red-400' }`} href='https://www.codewars.com/users/Jaarabits' target='_blank'> codewars</a>.
+        <a className='text-red-900' href='https://www.codewars.com/users/Jaarabits' target='_blank'> codewars</a>.
         This was done everyday throughout March, April to May. I remember the first day when the
         challenge was simple 8kyu (this is termed as a simple challenge and is awarded 2 points) which was to 
         convert a string to a number. I remembered that it was the simple <code>parseInt(&lt;string_name&gt;)</code>
         . Here, you can try the 
-        <a className={`${darkMode ? 'text-red-400' : 'text-red-400' }`} href='https://www.codewars.com/kata/544675c6f971f7399a000e79/train/javascript' target='_blank'> challenge </a>
+        <a className={`${darkMode ? 'text-red-400' : 'text-red-400' } text-ellipsis`} href='https://www.codewars.com/kata/544675c6f971f7399a000e79/train/javascript' target='_blank'> challenge </a>
         yourself</p>
         <br></br>
-        <a  className={`${darkMode ? 'text-red-400' : 'text-red-400' }`} 
+        <a  className={`${darkMode ? 'text-red-400' : 'text-red-400' } text-ellipsis`} 
         href='https://www.codewars.com/kata/544675c6f971f7399a000e79/train/javascript' target='_blank'>https://www.codewars.com/kata/544675c6f971f7399a000e79/train/javascript</a>
-        <br></br>
         <br></br>
         <br></br>
         <p>The rush of dopamine in my brain, when I saw the webpage turn green and the message, you
@@ -100,10 +101,10 @@ function Post1({darkMode}){
         <pre><code key={elem.id}>{elem.code}</code></pre>
         )}
          <p>Here, you can try the 
-        <a className={`${darkMode ? 'text-red-400' : 'text-red-400' }`} href='https://www.codewars.com/kata/573f5c61e7752709df0005d2/train/javascript' target='_blank'> challenge </a>
+        <a className={`${darkMode ? 'text-red-400' : 'text-red-400' } text-ellipsis`} href='https://www.codewars.com/kata/573f5c61e7752709df0005d2/train/javascript' target='_blank'> challenge </a>
         yourself</p>
         <br></br>
-        <a  className={`${darkMode ? 'text-red-400' : 'text-red-400' }`} 
+        <a className={`${darkMode ? 'text-red-400' : 'text-red-400' } text-ellipsis`} 
         href='https://www.codewars.com/kata/573f5c61e7752709df0005d2/train/javascript' target='_blank'>https://www.codewars.com/kata/573f5c61e7752709df0005d2/train/javascript</a>
         <br></br>
         <br></br>
@@ -135,8 +136,8 @@ function Post1({darkMode}){
         <img src='./Screenshot_2024-02-27_14_55_41.png'></img>
         <br></br>
         <p>Started learning web3 and smart contracts with hope to earn as an auditor and bug hunter for both web2 and web3 (22nd February 2024)</p>
-        <p>Shout out to <a className={`${darkMode ? 'text-red-400' : 'text-red-400' }`} href="https://www.youtube.com/c/PatrickCollins">Patrick Collins </a>,
-        <a className={`${darkMode ? 'text-red-400' : 'text-red-400' }`} href='https://updraft.cyfrin.io/' target='_blank'> cyfrin</a> and the team. 
+        <p>Shout out to <a className={`${darkMode ? 'text-red-400' : 'text-red-400' } text-ellipsis}`} href="https://www.youtube.com/c/PatrickCollins">Patrick Collins </a>,
+        <a className={`${darkMode ? 'text-red-400' : 'text-red-400' } text-ellipsis`} href='https://updraft.cyfrin.io/' target='_blank'> cyfrin</a> and the team. 
         They have helped me learn Solidity, smart contracts and the entire Bitcoin network</p>
         <br></br>
         </div>
