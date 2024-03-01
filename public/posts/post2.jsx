@@ -24,9 +24,14 @@ function Post2({darkMode}){
         <p>
         It seems that github enhanced their security such that inputting your password and
         username is not enough for them, since an attacker can easily get them through social 
-        engineering. So, the better alternative I heard of involves "gh" ~ which is some form of
-        authentication which confirms your identity before performing changes on the repository.
+        engineering. There are two ways of authentication (those that I know of)
         </p>
+        <br></br>
+        <p>They include:</p>
+        <li>Using Secure SHell (SSH) with its key</li>
+        <li>USing the github Command Line Interface (CLI)</li>
+        <br></br>
+        <h1 className="text-2xl font-extrabold my-5" id="ssh-method">1. The SSH method (my favorite)</h1>
         <br></br>
         <p>When cloning the preferred repository, you will have to use the SSH url</p>
         {/* Insert github SSH Url here */}
@@ -101,9 +106,43 @@ function Post2({darkMode}){
         </code>
         <br></br>
         <br></br>
-        <p>The above command adds the ssh url to the origin url so that github can authenticate you using your SSH key.</p>
+        <p>The above command resets your remote-origin url to the SSH url. This means that when performing remote changes to the
+            repository, it will use the SSH url.</p>
         <br></br>
-        <p>Unrelated but kindly remember the order: <b>Git remote add origin</b>, Dont mix it up</p>
+        <p>You can also view the remote origin url through the below command:</p>
+        <br></br>
+        <code>git remote -v</code>
+        <br></br>
+        <h1 className="text-2xl font-extrabold my-5" id="cli-method">2. The Github CLI method</h1>
+        <br></br>
+        <p>First, `gh` has to be installed</p>
+        <br></br>
+        <code>sudo apt install gh</code>
+        <br></br>
+        <br></br>
+        <p>Remember to input your password since the command uses `sudo` and this requires superuser privileges</p>
+        <br></br>
+        <p>For those who do not know, the github CLI is just you, logged in to your github account
+            and navigating it using your terminal.
+        </p>
+        <br></br>
+        <p>Type in the command:</p>
+        <br></br>
+        <code>gh auth login</code>
+        <br></br>
+        <br></br>
+        <p>You will be asked questions, for which you will answer according to your preference. After answering, you will be 
+            given a one time code. Which you will copy then press `Enter` to open your browser and input the one-time code.
+        </p>
+        <br></br>
+        <p><b>NOTE: </b>Make sure that you are using a safe network (to prevent you from being hacked). Just use your own mobile phone hotspot.</p>
+        <br></br>
+        <p>After that you would have successfully logged in and freely access your projects</p>
+        <br></br>
+        <p>I prefer the SSH method since it carries less risk though, but that's just me. Stay safe and git to work. </p>
+        <br></br>
+        {/* Add the dum pun gif */}
+        <img src="./dum-tss.gif" alt="Dum tss gif from gif tenor"></img>
         <br></br>
         <p>Thanks for reading</p>
         </div>
@@ -114,5 +153,5 @@ function Post2({darkMode}){
 Post2.propTypes = {
     darkMode : propTypes.bool.isRequired
 }
-
+// Add the minimal bash error as your next blog
 export default Post2;
