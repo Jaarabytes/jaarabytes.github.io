@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import propTypes from 'prop-types';
+import React from "react";
 
 const PostsTab = ({darkMode}) => {
     // NAVIGATION LINKS AND PROPERTIES FOR EVERY BLOG POST I HAVE WRITTEN
@@ -9,14 +10,14 @@ const PostsTab = ({darkMode}) => {
         header: "Reminder to self",
         path: "starting-in-tech",
         date: "27th September 2023",
-        read: "2 min",
+        read: "undefined",
       },
       {
       id:2,
       header: "Git rid of it",
       path: "git-rid-of-it",
       date: "14th February 2024",
-      read: "5 min"
+      read: "7 min"
       }
     ]
     return (

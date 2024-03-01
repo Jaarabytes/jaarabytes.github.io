@@ -9,7 +9,8 @@ module.exports = {
       colors: {
         neon: "rgb(57, 255, 20)",
         blackpen: "#333333",
-        whitepen: "#ffffff"
+        whitepen: "#ffffff",
+        sharingan : "#FF0000"
       }
     },
   },

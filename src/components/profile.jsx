@@ -6,7 +6,7 @@ function Profile({darkMode}){
         <div className={`py-5 px-3 text-center`}>
             <div className="my-5">
                 {/* //return the old pfp or use a sharingan image; */}
-                <img className="rounded-full mx-auto h-[150px] w-[150px]" src='../assets/Sharingan.jpeg' alt="profile picture"></img>
+                <img className="rounded-full mx-auto h-[150px] w-[150px]" src='src/assets/xxBmTs1i.jpeg' alt="profile picture"></img>
             </div>
             <div className="my-5">
                 <p className={`font-bold text-3xl py-3 ${darkMode ? 'text-neon' : ''}`}>XCII</p>

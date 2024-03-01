@@ -1,4 +1,6 @@
 import Proptypes from 'prop-types';
+import "../../src/components/components.css";
+import React from 'react';
 
 function Post1({darkMode}){
     const stringToNumber = [
@@ -76,15 +78,15 @@ return [...new Set(a.concat(b))]
         <p>Learnt HTML, CSS and Javascript during January and February 2023</p>
         <br></br>
         <p>Sharpened my Javascript skills through 
-        <a className='text-red-900' href='https://www.codewars.com/users/Jaarabits' target='_blank'> codewars</a>.
+        <a className='text-red-400' href='https://www.codewars.com/users/Jaarabits' target='_blank'> codewars</a>.
         This was done everyday throughout March, April to May. I remember the first day when the
         challenge was simple 8kyu (this is termed as a simple challenge and is awarded 2 points) which was to 
         convert a string to a number. I remembered that it was the simple <code>parseInt(&lt;string_name&gt;)</code>
         . Here, you can try the 
-        <a className={`${darkMode ? 'text-red-400' : 'text-red-400' } text-ellipsis`} href='https://www.codewars.com/kata/544675c6f971f7399a000e79/train/javascript' target='_blank'> challenge </a>
+        <a className='text-red-400 text-ellipsis' href='https://www.codewars.com/kata/544675c6f971f7399a000e79/train/javascript' target='_blank'> challenge </a>
         yourself</p>
         <br></br>
-        <a  className={`${darkMode ? 'text-red-400' : 'text-red-400' } text-ellipsis`} 
+        <a  className='text-red-400 text-ellipsis' 
         href='https://www.codewars.com/kata/544675c6f971f7399a000e79/train/javascript' target='_blank'>https://www.codewars.com/kata/544675c6f971f7399a000e79/train/javascript</a>
         <br></br>
         <br></br>
@@ -101,11 +103,13 @@ return [...new Set(a.concat(b))]
         <pre><code key={elem.id}>{elem.code}</code></pre>
         )}
          <p>Here, you can try the 
-        <a className={`${darkMode ? 'text-red-400' : 'text-red-400' } text-ellipsis`} href='https://www.codewars.com/kata/573f5c61e7752709df0005d2/train/javascript' target='_blank'> challenge </a>
+        <a className='text-red-400 text-ellipsis' href='https://www.codewars.com/kata/573f5c61e7752709df0005d2/train/javascript' target='_blank'> challenge </a>
         yourself</p>
         <br></br>
-        <a className={`${darkMode ? 'text-red-400' : 'text-red-400' } text-ellipsis`} 
+        <p className='text-red-400 sm:text-clip sm:overflow-hidden'>
+        <a 
         href='https://www.codewars.com/kata/573f5c61e7752709df0005d2/train/javascript' target='_blank'>https://www.codewars.com/kata/573f5c61e7752709df0005d2/train/javascript</a>
+        </p>
         <br></br>
         <br></br>
 

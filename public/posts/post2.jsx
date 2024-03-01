@@ -28,8 +28,8 @@ function Post2({darkMode}){
         </p>
         <br></br>
         <p>They include:</p>
-        <li>Using Secure SHell (SSH) with its key</li>
-        <li>USing the github Command Line Interface (CLI)</li>
+        <li><a href="#ssh-method">Using Secure SHell (SSH) with its key</a></li>
+        <li><a href="#cli-method">Using the Command Line Interface</a></li>
         <br></br>
         <h1 className="text-2xl font-extrabold my-5" id="ssh-method">1. The SSH method (my favorite)</h1>
         <br></br>
@@ -113,6 +113,14 @@ function Post2({darkMode}){
         <br></br>
         <code>git remote -v</code>
         <br></br>
+        <br></br>
+        <p>More info here :</p>
+        <br></br>
+        <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" className=" text-red-400 truncate" target="_blank">
+        https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+        </a>
+        <br></br>
+        <br></br>
         <h1 className="text-2xl font-extrabold my-5" id="cli-method">2. The Github CLI method</h1>
         <br></br>
         <p>First, `gh` has to be installed. </p>
@@ -151,7 +159,9 @@ function Post2({darkMode}){
         <br></br>
         <p><i>I know what you are thinking (I'm not from Japan. It's just a VPN)</i></p>
         <br></br>
-        <p>If you are a real reader: </p>
+        <p>If you are a real reader:
+        <a href='https://cli.github.com/manual/gh_auth_login' target="_blank"  className=" text-red-400 truncate" > https://cli.github.com/manual/gh_auth_login</a>
+         </p>
         {/* Add the fllwing url : https://cli.github.com/manual/gh_auth_login */}
         <br></br>
         <p>I prefer the SSH method since it carries less risk though, but that's just me. Stay safe and git to work. </p>

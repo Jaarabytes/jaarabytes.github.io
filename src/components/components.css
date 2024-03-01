@@ -19,3 +19,6 @@ html, body{
   scroll-behavior: smooth;
   font-family: 'JetBrains Mono', monospace;
 }
+a{
+ @apply text-red-400 sm:text-ellipsis;
+}
