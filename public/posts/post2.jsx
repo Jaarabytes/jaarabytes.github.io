@@ -115,12 +115,16 @@ function Post2({darkMode}){
         <br></br>
         <h1 className="text-2xl font-extrabold my-5" id="cli-method">2. The Github CLI method</h1>
         <br></br>
-        <p>First, `gh` has to be installed</p>
+        <p>First, `gh` has to be installed. </p>
         <br></br>
         <code>sudo apt install gh</code>
         <br></br>
         <br></br>
-        <p>Remember to input your password since the command uses `sudo` and this requires superuser privileges</p>
+        <img src='./Screenshot_2024-03-01_16_01_13.png'></img>
+        <br></br>
+        <p>Remember to input your password since the command uses `sudo` and this requires superuser privileges. I am already running as `root`
+            so I do not need to use `sudo`
+        </p>
         <br></br>
         <p>For those who do not know, the github CLI is just you, logged in to your github account
             and navigating it using your terminal.
@@ -131,13 +135,24 @@ function Post2({darkMode}){
         <code>gh auth login</code>
         <br></br>
         <br></br>
+        <img src="./Screenshot_2024-03-01_15_07_37.png"></img>
+        <br></br>
         <p>You will be asked questions, for which you will answer according to your preference. After answering, you will be 
             given a one time code. Which you will copy then press `Enter` to open your browser and input the one-time code.
         </p>
         <br></br>
+        <img src="./Screenshot_2024-03-01_15_07_50.png"></img>
+        <br></br>
         <p><b>NOTE: </b>Make sure that you are using a safe network (to prevent you from being hacked). Just use your own mobile phone hotspot.</p>
         <br></br>
         <p>After that you would have successfully logged in and freely access your projects</p>
+        <br></br>
+        <img src="./Screenshot_2024-03-01_15_08_06.png"></img>
+        <br></br>
+        <p><i>I know what you are thinking (I'm not from Japan. It's just a VPN)</i></p>
+        <br></br>
+        <p>If you are a real reader: </p>
+        {/* Add the fllwing url : https://cli.github.com/manual/gh_auth_login */}
         <br></br>
         <p>I prefer the SSH method since it carries less risk though, but that's just me. Stay safe and git to work. </p>
         <br></br>
