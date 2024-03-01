@@ -1,5 +1,4 @@
 import Proptypes from 'prop-types';
-import "../../src/components/components.css";
 import React from 'react';
 
 function Post1({darkMode}){
@@ -67,6 +66,7 @@ return [...new Set(a.concat(b))]
     ]
     return(
         <div className="px-5 my-5 sm:px-[20%]">
+        <Link to={`/posts/`} className="underline text-red-400" >/posts</Link>       
         <h1 className="text-3xl font-extrabold my-5"><b>Getting started in Tech</b></h1>
 
         <p>*This is just my journey, it is unnecessary for your reading*</p>
@@ -86,7 +86,7 @@ return [...new Set(a.concat(b))]
         <a className='text-red-400 text-ellipsis' href='https://www.codewars.com/kata/544675c6f971f7399a000e79/train/javascript' target='_blank'> challenge </a>
         yourself</p>
         <br></br>
-        <a  className='text-red-400 text-ellipsis' 
+        <a  className='text-red-400 truncate' 
         href='https://www.codewars.com/kata/544675c6f971f7399a000e79/train/javascript' target='_blank'>https://www.codewars.com/kata/544675c6f971f7399a000e79/train/javascript</a>
         <br></br>
         <br></br>
@@ -103,13 +103,12 @@ return [...new Set(a.concat(b))]
         <pre><code key={elem.id}>{elem.code}</code></pre>
         )}
          <p>Here, you can try the 
-        <a className='text-red-400 text-ellipsis' href='https://www.codewars.com/kata/573f5c61e7752709df0005d2/train/javascript' target='_blank'> challenge </a>
+        <a className=" text-red-400 truncate"  href='https://www.codewars.com/kata/573f5c61e7752709df0005d2/train/javascript' target='_blank'> challenge </a>
         yourself</p>
         <br></br>
-        <p className='text-red-400 sm:text-clip sm:overflow-hidden'>
-        <a 
-        href='https://www.codewars.com/kata/573f5c61e7752709df0005d2/train/javascript' target='_blank'>https://www.codewars.com/kata/573f5c61e7752709df0005d2/train/javascript</a>
-        </p>
+        <a className="text-red-400 truncate"  
+        href='https://www.codewars.com/kata/573f5c61e7752709df0005d2/train/javascript' target='_blank'
+        >https://www.codewars.com/kata/573f5c61e7752709df0005d2/train/javascript</a>
         <br></br>
         <br></br>
 

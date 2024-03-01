@@ -1,8 +1,10 @@
 import propTypes from "prop-types";
+import { Link } from "react-router-dom";
 function Post2({darkMode}){
     return(
         <>
         <div className="px-5 my-5 sm:px-[20%]">
+           <Link to={`/posts/`} className="underline text-red-400" >/posts</Link> 
         {/* center the content, create table of contents and resize images, possibly a medium style */}
         <h1 className="text-3xl font-extrabold my-5">Git rid of it!</h1>
         <p>Have you ever encountered this error before (Perhaps when cloning a private github repository): </p>
@@ -28,8 +30,8 @@ function Post2({darkMode}){
         </p>
         <br></br>
         <p>They include:</p>
-        <li><a href="#ssh-method">Using Secure SHell (SSH) with its key</a></li>
-        <li><a href="#cli-method">Using the Command Line Interface</a></li>
+        <li><a href="#ssh-method" className="hover:underline">Using Secure SHell (SSH) with its key</a></li>
+        <li><a href="#cli-method" className=" hover:underline">Using the Command Line Interface</a></li>
         <br></br>
         <h1 className="text-2xl font-extrabold my-5" id="ssh-method">1. The SSH method (my favorite)</h1>
         <br></br>
@@ -93,7 +95,9 @@ function Post2({darkMode}){
         <p>Head towards your personal account settings, navigate towards the 'SSH and GPG keys option'</p>
         <p>Copy the contents of the contents of the id_rsa.pub file which is under the hidden .ssh directory and paste it as your personal access token</p>
         <br></br>
-        <p>There you go! You didn't procastinate, Hurray!!!</p>
+        <p>This is what you should be pasting in the field: </p>
+        <br></br>
+        <img src='./Screenshot_2024-03-01_23_36_05.png'/>
         <br></br>
         <p>From there on, I believe there will be minimal issues encountered however what if you cloned the repository using the http client
             but now cannot authenticate? Don't fret.
