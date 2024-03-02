@@ -30,8 +30,8 @@ function Post2({darkMode}){
         </p>
         <br></br>
         <p>They include:</p>
-        <li><a href="#ssh-method" className="hover:underline">Using Secure SHell (SSH) with its key</a></li>
-        <li><a href="#cli-method" className=" hover:underline">Using the Command Line Interface</a></li>
+        <li><a href="#ssh-method" className="text-red-400 hover:underline">`Using Secure SHell (SSH) with its key`</a></li>
+        <li><a href="#cli-method" className="text-red-400 hover:underline">`Using the Command Line Interface`</a></li>
         <br></br>
         <h1 className="text-2xl font-extrabold my-5" id="ssh-method">1. The SSH method (my favorite)</h1>
         <br></br>
@@ -121,7 +121,7 @@ function Post2({darkMode}){
         <p>More info here :</p>
         <br></br>
         <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" className=" text-red-400 truncate" target="_blank">
-        https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+        https://docs.github.com/en/authentication/con...
         </a>
         <br></br>
         <br></br>

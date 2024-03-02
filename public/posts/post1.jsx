@@ -1,6 +1,5 @@
-import Proptypes from 'prop-types';
-import React from 'react';
-
+import proptypes from 'prop-types';
+import {Link} from 'react-router-dom'
 function Post1({darkMode}){
     const stringToNumber = [
         {
@@ -63,7 +62,13 @@ return [...new Set(a.concat(b))]
             "alt" : "Error based SQLi captured in Burp Suite repeater, rendered tab",
             "about" : "An 'error based SQL injection' which turned out to be poor error handling on the PHP backend(This was revealed due to laravel syntax)."
         }
-    ]
+    ];
+    const codewars = {
+        id : 1,
+        "tag" : "",
+        "url" : "https://www.codewars.com/kata/544675c6f971f7399a000e79/train/javascript",
+        "class" : "text-red-400 truncate"
+    }
     return(
         <div className="px-5 my-5 sm:px-[20%]">
         <Link to={`/posts/`} className="underline text-red-400" >/posts</Link>       
@@ -71,11 +76,26 @@ return [...new Set(a.concat(b))]
 
         <p>*This is just my journey, it is unnecessary for your reading*</p>
         <br></br>
+        <p>Also, go listen to 
+            <a href='https://darknetdiaries.com/'
+             target='_blank'
+             className='text-red-400'> Darknet Diaries</a>
+            </p>
         <br></br>
         <p>This is just a reminder to keep upskilling and improving. It contains dates on what I did(This was written on 29Th September 2023)
         </p>
         <br></br>
-        <p>Learnt HTML, CSS and Javascript during January and February 2023</p>
+        <p>Learnt HTML, CSS and Javascript during January and February 2023.
+            Shout out to <a
+            className='text-red-400'
+            target='_blank'
+            href="https://freecodecamp.org"
+            > FreeCodeCamp</a> and <a
+            className='text-red-400'
+            target='_blank'
+            href="https://w3schools.com"
+            > w3schools</a>
+        </p>
         <br></br>
         <p>Sharpened my Javascript skills through 
         <a className='text-red-400' href='https://www.codewars.com/users/Jaarabits' target='_blank'> codewars</a>.
@@ -83,11 +103,13 @@ return [...new Set(a.concat(b))]
         challenge was simple 8kyu (this is termed as a simple challenge and is awarded 2 points) which was to 
         convert a string to a number. I remembered that it was the simple <code>parseInt(&lt;string_name&gt;)</code>
         . Here, you can try the 
-        <a className='text-red-400 text-ellipsis' href='https://www.codewars.com/kata/544675c6f971f7399a000e79/train/javascript' target='_blank'> challenge </a>
+        <a className='text-red-400' href='https://www.codewars.com/kata/544675c6f971f7399a000e79/train/javascript' target='_blank'> challenge </a>
         yourself</p>
         <br></br>
-        <a  className='text-red-400 truncate' 
-        href='https://www.codewars.com/kata/544675c6f971f7399a000e79/train/javascript' target='_blank'>https://www.codewars.com/kata/544675c6f971f7399a000e79/train/javascript</a>
+        <a className='text-red-400 truncate' 
+        href='https://www.codewars.com/kata/544675c6f971f7399a000e79/train/javascript' target='_blank'>
+        https://www.codewars.com/kata/544675c...
+        </a>
         <br></br>
         <br></br>
         <p>The rush of dopamine in my brain, when I saw the webpage turn green and the message, you
@@ -106,9 +128,10 @@ return [...new Set(a.concat(b))]
         <a className=" text-red-400 truncate"  href='https://www.codewars.com/kata/573f5c61e7752709df0005d2/train/javascript' target='_blank'> challenge </a>
         yourself</p>
         <br></br>
-        <a className="text-red-400 truncate"  
+        <a 
         href='https://www.codewars.com/kata/573f5c61e7752709df0005d2/train/javascript' target='_blank'
-        >https://www.codewars.com/kata/573f5c61e7752709df0005d2/train/javascript</a>
+        className="text-red-400 truncate" 
+        >https://www.codewars.com/kata/573f5c61e7752...</a>
         <br></br>
         <br></br>
 
@@ -139,6 +162,7 @@ return [...new Set(a.concat(b))]
         <img src='./Screenshot_2024-02-27_14_55_41.png'></img>
         <br></br>
         <p>Started learning web3 and smart contracts with hope to earn as an auditor and bug hunter for both web2 and web3 (22nd February 2024)</p>
+        <br></br>
         <p>Shout out to <a className={`${darkMode ? 'text-red-400' : 'text-red-400' } text-ellipsis}`} href="https://www.youtube.com/c/PatrickCollins">Patrick Collins </a>,
         <a className={`${darkMode ? 'text-red-400' : 'text-red-400' } text-ellipsis`} href='https://updraft.cyfrin.io/' target='_blank'> cyfrin</a> and the team. 
         They have helped me learn Solidity, smart contracts and the entire Bitcoin network</p>
@@ -147,7 +171,7 @@ return [...new Set(a.concat(b))]
     )
 }
 Post1.Proptypes = {
-    darkMode :  Proptypes.bool.isRequired
+    darkMode :  proptypes.bool.isRequired
   }
 
 export default Post1;

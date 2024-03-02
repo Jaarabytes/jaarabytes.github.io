@@ -9,7 +9,7 @@ const PostsTab = ({darkMode}) => {
         id:1,
         header: "Reminder to self",
         path: "starting-in-tech",
-        date: "27th September 2023",
+        date: "1st January 1970",
         read: "undefined",
       },
       {
