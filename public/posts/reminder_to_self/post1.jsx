@@ -51,14 +51,14 @@ return [...new Set(a.concat(b))]
         {
             "id" : 1,
             "tag" : "Xss-on-chatbot",
-            "img-path" : "./Screenshot_2024-02-27_12_35_50.png",
+            "img-path" : "./reminder_to_self/Screenshot_2024-02-27_12_35_50.png",
             "alt" : "HTML injection to Self-XSS inside web chatbot",
             "about" : "HTML injection and Cross Site Scripting on a webchat bot. This however is not vulnerability since no victim is involved."
         },
         {
             "id" : 2,
             "tag" : "Error-based-SQLi",
-            "img-path" : "./Screenshot_2024-02-13_15_47_12.png",
+            "img-path" : "./reminder_to_self/Screenshot_2024-02-13_15_47_12.png",
             "alt" : "Error based SQLi captured in Burp Suite repeater, rendered tab",
             "about" : "An 'error based SQL injection' which turned out to be poor error handling on the PHP backend(This was revealed due to laravel syntax)."
         }
@@ -106,7 +106,8 @@ return [...new Set(a.concat(b))]
         <a className='text-red-400' href='https://www.codewars.com/kata/544675c6f971f7399a000e79/train/javascript' target='_blank'> challenge </a>
         yourself</p>
         <br></br>
-        <a className='text-red-400 truncate' 
+        <a className='text-red-400 truncate hover:underline'
+        style={{maxWidth : "100vw"}} 
         href='https://www.codewars.com/kata/544675c6f971f7399a000e79/train/javascript' target='_blank'>
         https://www.codewars.com/kata/544675c6f971f7399a000e79/train/javascript
         </a>
@@ -125,12 +126,12 @@ return [...new Set(a.concat(b))]
         <pre><code className='text-sm' key={elem.id}>{elem.code}</code></pre>
         )}
          <p>Here, you can try the 
-        <a className=" text-red-400 truncate"  href='https://www.codewars.com/kata/573f5c61e7752709df0005d2/train/javascript' target='_blank'> challenge </a>
+        <a className=" text-red-400"  href='https://www.codewars.com/kata/573f5c61e7752709df0005d2/train/javascript' target='_blank'> challenge </a>
         yourself</p>
         <br></br>
         <a 
         href='https://www.codewars.com/kata/573f5c61e7752709df0005d2/train/javascript' target='_blank'
-        className="text-red-400 text-wrap hover:underline" 
+        className="text-red-400 flex-shrink-0 hover:underline" 
         >https://www.codewars.com/kata/573f5c61e7752709df0005d2/train/javascript</a>
         <br></br>
         <br></br>
@@ -159,12 +160,12 @@ return [...new Set(a.concat(b))]
         <br></br>
         <p><b>Translation:</b> After you have finished studying Ruby, Javascript and Python, go back to class and learn something serious like Java</p>
         <br></br>
-        <img src='./Screenshot_2024-02-27_14_55_41.png'></img>
+        <img src='./reminder_to_self/Screenshot_2024-02-27_14_55_41.png'></img>
         <br></br>
         <p>Started learning web3 and smart contracts with hope to earn as an auditor and bug hunter for both web2 and web3 (22nd February 2024)</p>
         <br></br>
-        <p>Shout out to <a className={`${darkMode ? 'text-red-400' : 'text-red-400' } text-ellipsis}`} href="https://www.youtube.com/c/PatrickCollins">Patrick Collins </a>,
-        <a className={`${darkMode ? 'text-red-400' : 'text-red-400' } text-ellipsis`} href='https://updraft.cyfrin.io/' target='_blank'> cyfrin</a> and the team. 
+        <p>Shout out to <a className='text-red-400' href="https://www.youtube.com/c/PatrickCollins">Patrick Collins </a>,
+        <a className='text-red-400' href='https://updraft.cyfrin.io/' target='_blank'> cyfrin</a> and the team. 
         They have helped me learn Solidity, smart contracts and the entire Bitcoin network</p>
         <br></br>
         </div>

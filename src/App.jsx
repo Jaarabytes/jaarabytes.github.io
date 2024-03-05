@@ -21,7 +21,7 @@ function App() {
   const [isMenuOpen, toggleMenu] = Responsive();
 
   return (
-    <div className={ containerClassName } style={{minHeight:'100vh', maxWidth: "100vw"}}>
+    <div className={ containerClassName } style={{minHeight:'100vh', overflow: "hidden"}}>
     <Router >
       <Navbar toggleDarkMode={toggleDarkMode} darkMode={darkMode} isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
       <Routes>
