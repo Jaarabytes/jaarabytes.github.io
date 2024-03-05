@@ -108,7 +108,7 @@ return [...new Set(a.concat(b))]
         <br></br>
         <a className='text-red-400 truncate' 
         href='https://www.codewars.com/kata/544675c6f971f7399a000e79/train/javascript' target='_blank'>
-        https://www.codewars.com/kata/544675c...
+        https://www.codewars.com/kata/544675c6f971f7399a000e79/train/javascript
         </a>
         <br></br>
         <br></br>
@@ -116,13 +116,13 @@ return [...new Set(a.concat(b))]
             have passed all the tests. Sorry for the touching story, here are other ways to do it:
         </p>
         {stringToNumber.map( elem =>
-             <pre className='bg-slate-900'><code key={elem.id}>{elem.code}</code></pre>
+             <pre className><code className='text-sm' key={elem.id}>{elem.code}</code></pre>
              )}
         <br></br>
         <p>Also related, the common question on how to merge two arrays without duplicates. Here are some solutions: </p>
         <br></br>
         {mergeArrays.map(elem => 
-        <pre><code key={elem.id}>{elem.code}</code></pre>
+        <pre><code className='text-sm' key={elem.id}>{elem.code}</code></pre>
         )}
          <p>Here, you can try the 
         <a className=" text-red-400 truncate"  href='https://www.codewars.com/kata/573f5c61e7752709df0005d2/train/javascript' target='_blank'> challenge </a>
@@ -130,8 +130,8 @@ return [...new Set(a.concat(b))]
         <br></br>
         <a 
         href='https://www.codewars.com/kata/573f5c61e7752709df0005d2/train/javascript' target='_blank'
-        className="text-red-400 truncate" 
-        >https://www.codewars.com/kata/573f5c61e7752...</a>
+        className="text-red-400 text-wrap hover:underline" 
+        >https://www.codewars.com/kata/573f5c61e7752709df0005d2/train/javascript</a>
         <br></br>
         <br></br>
 

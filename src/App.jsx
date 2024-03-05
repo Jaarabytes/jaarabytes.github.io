@@ -8,8 +8,8 @@ import { BrowserRouter as Router, Route , Routes } from 'react-router-dom';
 import Error404 from './components/error404';
 import { useDarkModeToggle } from './components/toggleDarkMode';
 import { Responsive } from './components/responsive';
-import Post1 from '../public/posts/post1';
-import Post2 from '../public/posts/post2';
+import Post1 from '../public/posts/reminder_to_self/post1';
+import Post2 from '../public/posts/git_rid_of_it/post2';
 import Footer from './components/footer';
 import GitTag from '../public/tags/git/git';
 
@@ -21,7 +21,7 @@ function App() {
   const [isMenuOpen, toggleMenu] = Responsive();
 
   return (
-    <div className={ containerClassName } style={{minHeight:'100vh'}}>
+    <div className={ containerClassName } style={{minHeight:'100vh', maxWidth: "100vw"}}>
     <Router >
       <Navbar toggleDarkMode={toggleDarkMode} darkMode={darkMode} isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
       <Routes>

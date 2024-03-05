@@ -22,7 +22,7 @@ function Navbar({toggleDarkMode, darkMode, toggleMenu, isMenuOpen}){
             <button className="inline-flex items-center"
             onClick={toggleDarkMode}
             >
-                <i className={`${darkMode ? 'fa-solid fa-moon' : 'fa-solid fa-sun'} hover:text-neon text-3xl`}></i>
+                <i className={`${darkMode ? 'fa-solid fa-sun' : 'fa-solid fa-moon'} hover:text-neon text-3xl`}></i>
             </button>
 
             {/* Mobile Menu Button */}
