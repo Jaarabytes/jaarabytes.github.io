@@ -6,9 +6,17 @@ const Tags = ({darkMode}) => {
         {
             "tag" : ["git"],
             "path" : 'git/git'
+        },
+        {
+            "tag" : ["linux"],
+            "path" : 'linux/linux'
+        },
+        {
+            "tag" : ["GRUB"],
+            "path" : 'grub/grub'
         }
     ];
-    // DO THIS, create a tags tab like when you created a posts folder, but for  tags but when clicked should redirect to the post
+    // DO THIS, create a tags tab like when you created a posts folder, but for tags but when clicked should redirect to the post
 
     return(
         <div className="mt-5 px-5 sm:px-[20%]">
@@ -16,7 +24,7 @@ const Tags = ({darkMode}) => {
             {/* ADD TAGS HERE */}
             {tags.map(elem => 
                 <Link to={`/tags/${elem.path}`}
-                 className={`my-3 text-lg font-bold hover:text-red-700 ${darkMode ? 'text-neon' : ''}`}>
+                 className={`my-3 text-lg font-bold hover:text-red-700 ${darkMode ? 'text-neon' : ''} block`}>
                   {elem.tag}
                 </Link>
             )}

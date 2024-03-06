@@ -1,37 +1,21 @@
 import { Link } from "react-router-dom";
 import propTypes from 'prop-types';
-import React from "react";
 
-const PostsTab = ({darkMode}) => {
-    // NAVIGATION LINKS AND PROPERTIES FOR EVERY BLOG POST I HAVE WRITTEN
-    const posts = [
+const LinuxTag = ({darkMode}) => {
+    const linuxPosts = [
       {
-        id:1,
-        header: "Reminder to self",
-        path: "starting-in-tech",
-        date: "1st January 1970",
-        read: "undefined",
-      },
-      {
-      id:2,
-      header: "Git rid of it",
-      path: "git-rid-of-it",
-      date: "14th February 2024",
-      read: "7 min"
-      },
-      {
-      id:3,
+      id:1,
       header: "Minimal bash-like error",
       path: "minimal-bash-like-error",
       date: "3rd March 2024",
       read: "5 min"
       }
-    ]
+    ];
     return (
       <>
         <h1 className={`text-3xl bold my-5 mx-5 sm:px-[20%]`}><b>Posts:</b></h1>
         <div className={`mx-5 py-5 block sm:px-[20%]`}>
-            {posts.reverse().map((elem) => (
+            {linuxPosts.map((elem) => (
               <div
                 key={elem.id}
                 className={`py-2`}
@@ -53,7 +37,8 @@ const PostsTab = ({darkMode}) => {
         </>
       );
 }
-PostsTab.propTypes = {
-  darkMode: propTypes.bool.isRequired,
+LinuxTag.propTypes = {
+  darkMode: propTypes.bool.isRequired
 }
-export default PostsTab;
+
+export default LinuxTag;
