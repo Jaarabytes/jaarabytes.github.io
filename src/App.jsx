@@ -12,9 +12,9 @@ import Post1 from '../public/posts/reminder_to_self/post1';
 import Post2 from '../public/posts/git_rid_of_it/post2';
 import Post3 from '../public/posts/minimal_bash_like/post3';
 import Footer from './components/footer';
-import GitTag from '../public/tags/git/git';
-import LinuxTag from '../public/tags/linux/linux';
-import GrubTag from '../public/tags/GRUB/grub';
+import GitTag from '../public/tags/git';
+import LinuxTag from '../public/tags/linux';
+import GrubTag from '../public/tags/grub';
 
 function App() {
   // TOGGLING BETWEEN LIGHT AND DARK MODE
@@ -36,9 +36,9 @@ function App() {
         {/* JUST LIKE THE ABOVE FOR POST ID, CREATE INDIVIDUAL COMPONENTS AND SUGGEST THEIR PATHWAYS. LATER, YOU MIGHT FIGURE OUT A SHORTCUT */}
         <Route path="/about" element={<About darkMode={darkMode} />} />
         <Route path="/tags" element={<Tags darkMode={darkMode} />} />
-        <Route path={`/tags/git/git`} element={<GitTag darkMode={darkMode} />} />
-        <Route path={`/tags/GRUB/grub`} element={<GrubTag darkMode={darkMode} />} />
-        <Route path={`/tags/linux/linux`} element={<LinuxTag darkMode={darkMode} />} />
+        <Route path={`/tags/git`} element={<GitTag darkMode={darkMode} />} />
+        <Route path={`/tags/grub`} element={<GrubTag darkMode={darkMode} />} />
+        <Route path={`/tags/linux`} element={<LinuxTag darkMode={darkMode} />} />
         <Route path="*" element={<Error404 darkMode={darkMode} />} />
       </Routes>
       <Footer />
