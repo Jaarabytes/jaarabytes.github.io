@@ -85,6 +85,10 @@ return [...new Set(a.concat(b))]
         <p>This is just a reminder to keep upskilling and improving. It contains dates on what I did(This was written on 29Th September 2023)
         </p>
         <br></br>
+        <h3 className='text-xl font-semibold'> December 2022.</h3>
+        <br></br>
+        <p>Was learning the about computers and got interested in programming, so I started with python (failed along the way)</p>
+        <br></br>
         <h3 className='text-xl font-semibold'> January to February 2023.</h3>
         <br></br>
         <p>Learnt HTML, CSS and Javascript.
@@ -205,12 +209,9 @@ return [...new Set(a.concat(b))]
         <br></br>
         <h3 className='text-xl font-semibold'>February 2024</h3>
         <br></br>
-        <p>Deployed this static website through vercel. <b>Note: </b> Github pages does not compile React code thus when deployed to github pages, the 
-        <span
+        <p>Deployed this static website through vercel. <b>Note: </b> Github pages does not compile React code thus when deployed to github pages, the <span
         className='text-red-400 flex-shrink-0'
-        >
-            `Strict : MIME type checking`
-        </span>
+        > `Strict : MIME type checking` </span>
          makes the website return a 404 error. 
         (Github pages does not understand `jsx` code)
         </p>
@@ -218,8 +219,9 @@ return [...new Set(a.concat(b))]
         <p>Started learning web3 and smart contracts with hope to earn as an auditor and bug hunter for both web2 and web3 (22nd February 2024)</p>
         <br></br>
         <p>Shout out to <a className='text-red-400' href="https://www.youtube.com/c/PatrickCollins">Patrick Collins </a>,
-        <a className='text-red-400' href='https://updraft.cyfrin.io/' target='_blank'> cyfrin</a> and the team. 
-        They have helped me learn Solidity, smart contracts and the entire Bitcoin network</p>
+        <a className='text-red-400' href='https://twitter.com/VittoStack' target='_blank'> Vitto</a> and the entire
+        <a className='text-red-400' href='https://updraft.cyfrin.io/' target='_blank'> cyfrin updraft team</a>       . 
+        They have helped me learn Solidity, smart contracts and the entire web3 network for free. They are a gem!</p>
         <br></br>
         <br></br>
         </div>
