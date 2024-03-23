@@ -16,6 +16,9 @@ import GitTag from '../public/tags/git';
 import LinuxTag from '../public/tags/linux';
 import GrubTag from '../public/tags/grub';
 
+// Remember to add search, codeSnippet, newsletter and next/previous post
+// Next blogpost should be the secure code review, re-entrancy attacks
+// Link it to the seneca protocol, yeah
 function App() {
   // TOGGLING BETWEEN LIGHT AND DARK MODE
   const [darkMode, toggleDarkMode] = useDarkModeToggle();

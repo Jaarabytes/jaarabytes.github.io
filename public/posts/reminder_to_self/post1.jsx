@@ -1,5 +1,6 @@
 import proptypes from 'prop-types';
 import {Link} from 'react-router-dom'
+import Snippet from '../../../src/components/snippet';
 function Post1({darkMode}){
     const stringToNumber = [
         {
@@ -124,15 +125,24 @@ return [...new Set(a.concat(b))]
         <p>The rush of dopamine in my brain, when I saw the webpage turn green and the message, you
             have passed all the tests. Sorry for the touching story, here are other ways to do it:
         </p>
+        <br></br>
         {stringToNumber.map( elem =>
-             <pre className><code className='text-sm' key={elem.id}>{elem.code}</code></pre>
+             <>
+             <Snippet code={elem.code} language="javascript"></Snippet>
+             <br></br>
+             </>
              )}
         <br></br>
         <p>Also related, the common question on how to merge two arrays without duplicates. Here are some solutions: </p>
         <br></br>
+        {/* PLACE CODE SNIPPET HERE */}
         {mergeArrays.map(elem => 
-        <pre><code className='text-sm' key={elem.id}>{elem.code}</code></pre>
+        <>
+        <Snippet code={elem.code} language="javascript"></Snippet>
+        <br></br>
+        </>
         )}
+        <br></br>
          <p>Here, you can try the 
         <a className=" text-red-400"  href='https://www.codewars.com/kata/573f5c61e7752709df0005d2/train/javascript' target='_blank'> challenge </a>
         yourself</p>
