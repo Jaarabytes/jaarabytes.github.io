@@ -42,10 +42,18 @@ function Post3(){
                 This lists all partitions in your system. Your results should be similar to this: 
             </p>
             <br></br>
+            <div
+            className="bg-gray-800"
+            style={{
+                padding: "10px",
+                borderRadius: "10px"
+            }}
+            >
             <code>
             grub&gt; ls <br></br>
             (hd0) (hd0,msdos5) (hd0,msdos3) (hd0,msdos2) (hd0,msdos1) (hd1) (hd1,msdos1)
             </code>
+            </div>
             <br></br>
             <br></br>
             <p>Here comes the fun part. You will have to run each of the following set of commands on each partition: </p>
@@ -58,6 +66,13 @@ function Post3(){
             it is the partition that contains the system files multiple times.
             </p>
             <br></br>
+            <div
+            className="bg-gray-800"
+            style={{
+                padding: "10px",
+                borderRadius: "10px"
+            }}
+            >
             <code>
             grub&gt; <b>ls</b> <br></br>
             #This lists all partitions of your system <br></br>
@@ -71,6 +86,7 @@ function Post3(){
             grub&gt; <b>insmod normal</b><br></br>
             grub&gt; <b>normal</b><br></br>
             </code>
+            </div>
             <br></br>
             <p>Then, reboot your system, open your terminal and run <span
             className="text-red-400"
