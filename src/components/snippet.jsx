@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-import propTypes from "prop-types";
 
 function Snippet({code, language}){
     // Copying content into the clipboard for users
@@ -25,12 +24,18 @@ function Snippet({code, language}){
 
     return(
         <>
+        <div
+        style={{
+            borderRadius: "10px"
+        }}
+        >
         <div style={{
                 display: "flex",
                 justifyContent: "space-between",
                 position: "relative",
                 paddingBlock: "10px"
             }}
+            // className={darkMode ? "bg-gray-800" : "bg-gray-200"}
             >
             <span>
                 {language}
@@ -41,8 +46,9 @@ function Snippet({code, language}){
                 right: 0,
                 position: "absolute",
                 top: 0,
+                padding: "10px"
             }}
-            className={isHovered ? "text-neon" : ''}
+            className={"hover:text-neon"}
             onClick={handleCopy}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
@@ -52,17 +58,16 @@ function Snippet({code, language}){
         </div>
         <div style={{
             overflow: "auto",
-            // backgroundColor: "rgb(17 24 0)",
             padding: "20px",
             borderRadius: "10px"
         }}
-        // className={`${darkMode ? "bg-gray-800" : "bg-slate-400"} text-slate-50`}
         >
             <pre>
                 <code ref={codeRef}>
                     {code}
                 </code>
             </pre>
+        </div>
         </div>
         </>
     )

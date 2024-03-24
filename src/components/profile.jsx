@@ -5,7 +5,6 @@ function Profile({darkMode}){
     return(
         <div className={`py-5 px-3 text-center`}>
             <div className="my-5">
-                {/* //return the old pfp or use a sharingan image; */}
                 <img className="rounded-full mx-auto h-[150px] w-[150px]" src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6QaDOA1lXrctLwGMmQ9FCY4jIT2QWvc7VLA&usqp=CAU' alt="profile picture"></img>
             </div>
             <div className="my-5">

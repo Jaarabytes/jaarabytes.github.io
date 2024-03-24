@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Snippet from "../../../src/components/snippet";
 
-
-function Post3(){
+function Post3({darkMode}){
     return (
         <>
         <div className="px-5 my-5 sm:px-[20%]">
@@ -46,7 +46,6 @@ function Post3(){
             </p>
             <br></br>
             <div
-            className="bg-gray-800"
             style={{
                 padding: "10px",
                 borderRadius: "10px"
@@ -75,7 +74,6 @@ function Post3(){
             </p>
             <br></br>
             <div
-            className="bg-gray-800"
             style={{
                 padding: "10px",
                 borderRadius: "10px"
@@ -108,11 +106,6 @@ function Post3(){
             <img src="./minimal_bash_like/FY35R0fX0AASODJ.png"></img>
             <br></br>
             <p>Once you have gained access to your Operating System, it is time to reinstall and update your GRUB.</p>
-                 {/* open your terminal and run <span */}
-            {/* // className="text-red-400" */}
-            {/* // >`sudo update-grub`</span> then <span */}
-            {/* // className="text-red-400" */}
-            {/* // >`sudo grub install /dev/sda`</span> */}
             <br></br>
             <p>The GRUB of all Linux based Operating Systems is
                  stored in <span className="text-red-400">`/boot/grub`</span> if the system uses Legacy BIOS 
@@ -124,7 +117,16 @@ function Post3(){
             <p>We will now do a <span className="text-red-400">`sudo grub-install /dev/sdXY`</span> and <span className="text-red-400">`sudo update-grub` </span>
              where X is disk number and Y is partition number of EFI partition. You can check that by using your partition editor, Gnome Disks or G-Parted</p>
              <br></br>
-             {/* ADD THE SNIPPET COMPONENT TO INSTALL GPARTED OR DISKS UTILITY */}
+             <p>Here are the commands: </p>
+            <br></br>
+            <Snippet darkMode={darkMode}
+            code={`sudo apt install gparted
+sudo apt install gnome-disk-utility
+sudo grub-install /dev/sda1
+sudo update-grub
+                `
+            }
+            ></Snippet>
              <br></br>
              <p>For me, I install it in <span
             className="text-red-400"

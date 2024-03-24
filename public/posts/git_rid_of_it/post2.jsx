@@ -158,8 +158,6 @@ function Post2({darkMode}){
         <br></br>
         <img src="./git_rid_of_it/Screenshot_2024-03-01_15_08_06.png"></img>
         <br></br>
-        <p><i>I know what you are thinking (I'm not from Japan. It's just a VPN)</i></p>
-        <br></br>
         <p>If you are a real reader: </p>
         <br></br>       
         <a href='https://cli.github.com/manual/gh_auth_login' target="_blank"  className=" text-red-400 truncate" > https://cli.github.com/manual/gh_auth_login</a>
