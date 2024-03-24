@@ -108,7 +108,7 @@ return [...new Set(a.concat(b))]
         <br></br>
         <p>Sharpened my Javascript skills through 
         <a className='text-red-400' href='https://www.codewars.com/users/Jaarabits' target='_blank'> codewars</a>.
-        This was consistenly done. I remember the first day when the
+        This was consistently done. I remember the first day when the
         challenge was simple 8kyu (this is termed as a simple challenge and is awarded 2 points) which was to 
         convert a string to a number. I remembered that it was the simple <code>parseInt(&lt;string_name&gt;)</code>
         . Here, you can try the 
@@ -169,10 +169,10 @@ return [...new Set(a.concat(b))]
         <br></br>
         <p>Learnt React (8th September to 16th September)</p>
         <br></br>
-        <p>Learnt Redux and Tailwind CSS (17th to 20th Spetmber)</p>
+        <p>Learnt Redux and Tailwind CSS (17th to 20th September)</p>
         <br></br>
         <p>This website was created using React, vite and Tailwind CSS through the days of 21 st September to 25th September 2023.
-            I felt the need of integerating Redux, however the project is not big enough. Only uploaded the code to 
+            I felt the need of integrating Redux, however the project is not big enough. Only uploaded the code to 
             <a
             className='text-red-400 flex-shrink-0 hover:underline'
             href='https://github.com/jaarabytes/jaarabytes.github.io'

@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import propTypes from "prop-types";
 
 function Snippet({code, language}){
     // Copying content into the clipboard for users
@@ -30,7 +31,7 @@ function Snippet({code, language}){
             padding: "20px",
             borderRadius: "10px"
         }}
-        className="bg-gray-800"
+        // className={`${darkMode ? "bg-gray-800" : "bg-slate-400"} text-slate-50`}
         >
             <div style={{
                 display: "flex",
@@ -62,5 +63,9 @@ function Snippet({code, language}){
         </>
     )
 }
+
+// Post2.propTypes = {
+//     darkMode : propTypes.bool.isRequired
+// }
 
 export default Snippet;

@@ -16,7 +16,9 @@ import GitTag from '../public/tags/git';
 import LinuxTag from '../public/tags/linux';
 import GrubTag from '../public/tags/grub';
 
-// Remember to add search, codeSnippet, newsletter and next/previous post
+// CodeSnippet successfully added, now to sleep
+
+// Remember to add a search feature, newsletter feature and next/previous post feature
 // Next blogpost should be the secure code review, re-entrancy attacks
 // Link it to the seneca protocol, yeah
 function App() {
