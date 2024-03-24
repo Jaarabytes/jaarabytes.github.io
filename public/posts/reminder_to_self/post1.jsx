@@ -128,7 +128,7 @@ return [...new Set(a.concat(b))]
         <br></br>
         {stringToNumber.map( elem =>
              <>
-             <Snippet code={elem.code} language="javascript"></Snippet>
+             <Snippet code={elem.code} language="javascript" darkMode={darkMode}></Snippet>
              <br></br>
              </>
              )}
@@ -138,7 +138,7 @@ return [...new Set(a.concat(b))]
         {/* PLACE CODE SNIPPET HERE */}
         {mergeArrays.map(elem => 
         <>
-        <Snippet code={elem.code} language="javascript"></Snippet>
+        <Snippet code={elem.code} language="javascript" darkMode={darkMode}></Snippet>
         <br></br>
         </>
         )}

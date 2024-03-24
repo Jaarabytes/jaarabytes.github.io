@@ -50,6 +50,7 @@ function Post3({darkMode}){
                 padding: "10px",
                 borderRadius: "10px"
             }}
+            className="bg-gray-800"
             >
             <code>
             grub&gt; ls <br></br>
@@ -78,6 +79,7 @@ function Post3({darkMode}){
                 padding: "10px",
                 borderRadius: "10px"
             }}
+            className="bg-gray-800"
             >
             <code>
             grub&gt; <b>ls</b> <br></br>

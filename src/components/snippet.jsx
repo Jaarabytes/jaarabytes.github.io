@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
+import { useDarkModeToggle } from "./toggleDarkMode";
 
-function Snippet({code, language}){
+function Snippet({code, language, darkMode}){
     // Copying content into the clipboard for users
     const codeRef = useRef(null);
     const [copied, setCopied] = useState(false);
@@ -21,21 +22,18 @@ function Snippet({code, language}){
             // setTimeout(() => setCopied((false), 2000));
         }
     };
-
     return(
         <>
-        <div
-        style={{
-            borderRadius: "10px"
-        }}
-        >
+        <div>
         <div style={{
                 display: "flex",
                 justifyContent: "space-between",
                 position: "relative",
-                paddingBlock: "10px"
+                padding: "20px",
+                borderTopLeftRadius: "10px",
+                borderTopRightRadius: "10px"
             }}
-            // className={darkMode ? "bg-gray-800" : "bg-gray-200"}
+            className={darkMode ? "bg-gray-700" : "bg-gray-200"}
             >
             <span>
                 {language}
@@ -48,7 +46,7 @@ function Snippet({code, language}){
                 top: 0,
                 padding: "10px"
             }}
-            className={"hover:text-neon"}
+            className={darkMode ? "hover:text-neon": "hover:text-red-400"}
             onClick={handleCopy}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
@@ -59,8 +57,10 @@ function Snippet({code, language}){
         <div style={{
             overflow: "auto",
             padding: "20px",
-            borderRadius: "10px"
+            borderBottomLeftRadius: "10px",
+            borderBottomRightRadius: "10px"
         }}
+        className={darkMode ? "bg-gray-800 " : "bg-gray-300"}
         >
             <pre>
                 <code ref={codeRef}>
