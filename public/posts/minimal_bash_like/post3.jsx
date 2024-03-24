@@ -17,7 +17,8 @@ function Post3(){
             </i>
             </code>
             <br></br>
-            <img src="https://www.linux.org/attachments/p_20200927_185743-jpg.7356/"
+            {/* ADD MIKE's IMAGE HERE */}
+            <img src="./minimal_bash_like/FY3tF38XEAAUiZF.jpeg"
              alt="Minimal bash like line editing error" 
              className="my-5"
              />
@@ -38,6 +39,8 @@ function Post3(){
                 GRUB is responsible for showing you the selection of your Operating System after booting
                 </p>
             <br></br>
+            <p>Here is how you solve it: </p>
+            <br></br>
             <p>At the command line, type in the command <span className="text-red-400">`ls`</span>.
                 This lists all partitions in your system. Your results should be similar to this: 
             </p>
@@ -55,6 +58,11 @@ function Post3(){
             </code>
             </div>
             <br></br>
+            <br></br>
+            <p>Now, we need to find out which partition contains our Linux Operating System so that we can boot from that partition.
+                We also set root and prefix to that partition. Root variable partitions are where the entire operating System is installed and 
+                prefix variable partitions are where GRUB is installed.
+            </p>
             <br></br>
             <p>Here comes the fun part. You will have to run each of the following set of commands on each partition: </p>
             <br></br>
@@ -88,23 +96,58 @@ function Post3(){
             </code>
             </div>
             <br></br>
-            <p>Then, reboot your system, open your terminal and run <span
-            className="text-red-400"
-            >`sudo update-grub`</span> then <span
-            className="text-red-400"
-            >`sudo grub install /dev/sda`</span>
+            <p>Basically: </p>
+            <br></br>
+            <img src="./minimal_bash_like/FY35CpFX0AI88iU.jpeg"></img>
             <br></br>
             <br></br>
-            <span
+            <img src="./minimal_bash_like/FY35L0XX0AE-fdP.png"></img>
+            <br></br>
+            <p>This should be your last try, in case the others failed: </p>
+            <br></br>
+            <img src="./minimal_bash_like/FY35R0fX0AASODJ.png"></img>
+            <br></br>
+            <p>Once you have gained access to your Operating System, it is time to reinstall and update your GRUB.</p>
+                 {/* open your terminal and run <span */}
+            {/* // className="text-red-400" */}
+            {/* // >`sudo update-grub`</span> then <span */}
+            {/* // className="text-red-400" */}
+            {/* // >`sudo grub install /dev/sda`</span> */}
+            <br></br>
+            <p>The GRUB of all Linux based Operating Systems is
+                 stored in <span className="text-red-400">`/boot/grub`</span> if the system uses Legacy BIOS 
+                 and <span className="text-red-400">`/EFI/grub`</span> (or) <span className="text-red-400">`/boot/EFI/grub` </span>in case of UEFI.</p>
+            <br></br>
+            <br></br>
+            <img src="./minimal_bash_like/FY37XV2WYAIZmB3.jpeg"></img>
+            <br></br>
+            <p>We will now do a <span className="text-red-400">`sudo grub-install /dev/sdXY`</span> and <span className="text-red-400">`sudo update-grub` </span>
+             where X is disk number and Y is partition number of EFI partition. You can check that by using your partition editor, Gnome Disks or G-Parted</p>
+             <br></br>
+             {/* ADD THE SNIPPET COMPONENT TO INSTALL GPARTED OR DISKS UTILITY */}
+             <br></br>
+             <p>For me, I install it in <span
             className="text-red-400"
-            >`/dev/sda`</span> is used since grub will be installed at the root of the partition thus other partitions will be able to access it.
+            >`/dev/sda`</span>. Now, reboot your system to check if the error persists. </p>
+            <br></br>
+            <img src="./minimal_bash_like/FY3-CiPX0AAwol1.jpeg"></img>
+            <br></br>
+            <p>Thanks for reading this you supreme being. I was inspired by  
+            <a
+            target="_blank"
+            className="text-red-400"
+            href="https://twitter.com/Known_Mike"
+            > `@known_mike`</a>. Here is the specific post: 
             </p>
             <br></br>
-            <p>Thanks for reading this you supreme being. Don't forget to use the line  
-            <span
-            className="text-red-400"
-            > `I use linux btw`</span> every chance that you get.
-            </p>
+            <a
+            className="text-red-400 hover:underline"
+            href="https://twitter.com/Known_Mike/status/1553180270815223809"
+            target="_blank"
+            >
+                https://twitter.com/Known_Mike/status/1553180270815223809
+            </a>
+            
         </div>
         </>
     )

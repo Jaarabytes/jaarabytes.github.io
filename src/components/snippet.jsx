@@ -26,16 +26,10 @@ function Snippet({code, language}){
     return(
         <>
         <div style={{
-            overflow: "auto",
-            // backgroundColor: "rgb(17 24 0)",
-            padding: "20px",
-            borderRadius: "10px"
-        }}
-        // className={`${darkMode ? "bg-gray-800" : "bg-slate-400"} text-slate-50`}
-        >
-            <div style={{
                 display: "flex",
-                justifyContent: "space-between"
+                justifyContent: "space-between",
+                position: "relative",
+                paddingBlock: "10px"
             }}
             >
             <span>
@@ -43,17 +37,27 @@ function Snippet({code, language}){
             </span>
             <button
             style={{
-                transition: "background-color 0.5s ease",
-                
+                transition: "color 0.5s ease",
+                right: 0,
+                position: "absolute",
+                top: 0,
             }}
-            className={isHovered ? "bg-red-400" : ''}
+            className={isHovered ? "text-neon" : ''}
             onClick={handleCopy}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             >
                 {copied ? "Copied!" : "Copy" }
             </button>
-            </div>
+        </div>
+        <div style={{
+            overflow: "auto",
+            // backgroundColor: "rgb(17 24 0)",
+            padding: "20px",
+            borderRadius: "10px"
+        }}
+        // className={`${darkMode ? "bg-gray-800" : "bg-slate-400"} text-slate-50`}
+        >
             <pre>
                 <code ref={codeRef}>
                     {code}
