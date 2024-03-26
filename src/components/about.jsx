@@ -2,14 +2,14 @@ import React from "react";
 const About = () => {
     const skills = [
         {
-            id : "front-end",
-            type:"Front end web development:",
-            tools:["HTML5, ","CSS, ", "Sass, ", "Javascript, ", "Typescript, " , "JQuery, ", "React, ", "Svelte, ", "Bootstrap, ", "Tailwind"]
-        },
-        {
             id : "programming-languages",
             type: "Programming languages:",
-            tools: ["Bash, ", "Python, ", "Java, ", "C, ", "Solidity"]
+            tools: ["Bash, ", "Python, ", ,"Javascript,",  " Solidity", ", Vyper"]
+        },
+        {
+            id: "technical-skills",
+            type:'Technical skills: ',
+            tools: ["Linux "]
         }
     ];
 
@@ -42,7 +42,6 @@ const About = () => {
                 <p>{val.date}</p>
                 </>
             ))}
-            {/* DISPLAY CERTIFICATIONS HERE */}
         </div>
     )
 }
