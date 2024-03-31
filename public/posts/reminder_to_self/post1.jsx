@@ -104,7 +104,7 @@ return [...new Set(a.concat(b))]
             > w3schools</a>
         </p>
         <br></br>
-        <h3 className='text-xl font-semibold'>March, April to May 2023.</h3>
+        <h3 className='text-xl font-semibold'>March to April 2023.</h3>
         <br></br>
         <p>Sharpened my Javascript skills through 
         <a className='text-red-400' href='https://www.codewars.com/users/Jaarabits' target='_blank'> codewars</a>.
@@ -152,6 +152,11 @@ return [...new Set(a.concat(b))]
         className="text-red-400 flex-shrink-0 hover:underline" 
         >https://www.codewars.com/kata/573f5c61e7752709df0005d2/train/javascript</a>
         <br></br>
+        <br></br>
+        <h3 className='text-xl font-semibold'>May 2023</h3>
+        <br></br>
+        <p>Learnt NodeJs, typescript, git and some frameworks such as Jquery, Svelte and Scss.</p>
+        <p>Also, relearnt python</p>
         <br></br>
         <h3 className='text-xl font-semibold'>August 2023</h3>
         <br></br>
@@ -233,6 +238,10 @@ return [...new Set(a.concat(b))]
         <a className='text-red-400' href='https://updraft.cyfrin.io/' target='_blank'> cyfrin updraft team</a>       . 
         They have helped me learn Solidity, smart contracts and the entire web3 network for free. They are a gem!</p>
         <br></br>
+        <h3 className='text-xl font-semibold'>March 2024</h3>
+        <br></br>
+        <p>Learnt vyper(a smart contract programming language which follows a python-like syntax), smart contract security and read some security reports from 
+            <a className='text-red-400' href='https://solodit.xyz' target='_blank'> Solodit.</a></p>
         <br></br>
         </div>
     )
