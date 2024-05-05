@@ -24,16 +24,23 @@ function Snippet({code, language, darkMode}){
     };
     return(
         <>
-        <div>
+        <div className="border border-slate-200/20"
+        style={{
+            borderTopLeftRadius: "10px",
+            borderTopRightRadius: "10px",
+            borderBottomLeftRadius: "10px",
+            borderBottomRightRadius: "10px"
+        }}
+        >
         <div style={{
                 display: "flex",
                 justifyContent: "space-between",
                 position: "relative",
-                padding: "20px",
+                padding: "10px",
                 borderTopLeftRadius: "10px",
-                borderTopRightRadius: "10px"
+                borderTopRightRadius: "10px",
             }}
-            className={darkMode ? "bg-gray-700" : "bg-gray-200"}
+            className={darkMode ? "bg-gray-700 text-sm" : "bg-gray-200 text-sm"}
             >
             <span>
                 {language}
@@ -46,7 +53,7 @@ function Snippet({code, language, darkMode}){
                 top: 0,
                 padding: "10px"
             }}
-            className={darkMode ? "hover:text-neon": "hover:text-red-400"}
+            className={darkMode ? "hover:text-neon text-sm": "hover:text-red-400 text-sm"}
             onClick={handleCopy}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
@@ -56,11 +63,11 @@ function Snippet({code, language, darkMode}){
         </div>
         <div style={{
             overflow: "auto",
-            padding: "20px",
+            padding: "13px",
             borderBottomLeftRadius: "10px",
             borderBottomRightRadius: "10px"
         }}
-        className={darkMode ? "bg-gray-800 " : "bg-gray-300"}
+        className={darkMode ? "bg-neutral-950" : "bg-gray-300"}
         >
             <pre>
                 <code ref={codeRef}>

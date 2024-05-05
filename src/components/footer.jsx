@@ -1,20 +1,19 @@
+import NextPost from "./nextPost";
+
 
 function Footer() {
     return(
-        <div className="text-sm text-center mt-5">
-           <p>© Powered by <a
-           href="https://react.dev"
-           target="_blank"
-           className="hover:underline hover:text-red-400"
-           >React</a>, <a
-           href="https://vitejs.dev"
-           target="_blank"
-           className="hover:underline hover:text-red-400"
-           >Vite JS</a> and <a
-           href="https://tailwindcss.com"
-           target="_blank"
-           className="hover:underline hover:text-red-400"
-           >Tailwind CSS</a></p>
+        <div className="text-sm text-center my-5">
+            <p>Donate (ETH/ ERC20):</p>
+            <p>
+                <a
+                href="https://etherscan.io/address/0xE521fC02155C8F49Bf10758cDc8A1AC3732Dc330"
+                className="text-red-400 hover:underline"
+                >
+                0xE521fC02155C8F49Bf10758cDc8A1AC3732Dc330
+                </a>
+                </p>
+            {/* <NextPost /> */}
         </div>
     )
 }

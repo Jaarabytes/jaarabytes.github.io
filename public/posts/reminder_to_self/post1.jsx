@@ -1,6 +1,9 @@
 import proptypes from 'prop-types';
 import {Link} from 'react-router-dom'
-import Snippet from '../../../src/components/snippet';
+import Snippet from '/src/components/snippet';
+import NextPost from '/src/components/nextPost';
+
+
 function Post1({darkMode}){
     const stringToNumber = [
         {
@@ -75,20 +78,23 @@ return [...new Set(a.concat(b))]
         <Link to={`/posts/`} className="underline text-red-400" >/posts</Link>       
         <h1 className="text-3xl font-extrabold my-5"><b>Getting started in Tech</b></h1>
 
-        <p>*This is just my journey, it is unnecessary for your reading*</p>
-        <br></br>
-        <p>Also, go listen to 
+        <p
+        className='text-sm'
+        ><i>*This is just my journey, therefore unnecessary for your reading*</i></p>
+        {/* <p>Also, go listen to 
             <a href='https://darknetdiaries.com/'
              target='_blank'
              className='text-red-400'> Darknet Diaries</a>
-            </p>
+            </p> */}
         <br></br>
-        <p>This is just a reminder to keep upskilling and improving. It contains dates on what I did(This was written on 29Th September 2023)
+        <p>Reminder: Keep upskilling and improving.(29th September 2023)
         </p>
+        <br></br>
         <br></br>
         <h3 className='text-xl font-semibold'> December 2022.</h3>
         <br></br>
         <p>Was learning the about computers and got interested in programming, so I started with python (failed along the way)</p>
+        <br></br>
         <br></br>
         <h3 className='text-xl font-semibold'> January to February 2023.</h3>
         <br></br>
@@ -103,6 +109,7 @@ return [...new Set(a.concat(b))]
             href="https://w3schools.com"
             > w3schools</a>
         </p>
+        <br></br>
         <br></br>
         <h3 className='text-xl font-semibold'>March to April 2023.</h3>
         <br></br>
@@ -128,7 +135,7 @@ return [...new Set(a.concat(b))]
         <br></br>
         {stringToNumber.map( elem =>
              <>
-             <Snippet code={elem.code} language="javascript" darkMode={darkMode}></Snippet>
+             <Snippet code={elem.code} language="Javascript" darkMode={darkMode}></Snippet>
              <br></br>
              </>
              )}
@@ -138,7 +145,7 @@ return [...new Set(a.concat(b))]
         {/* PLACE CODE SNIPPET HERE */}
         {mergeArrays.map(elem => 
         <>
-        <Snippet code={elem.code} language="javascript" darkMode={darkMode}></Snippet>
+        <Snippet code={elem.code} language="Javascript" darkMode={darkMode}></Snippet>
         <br></br>
         </>
         )}
@@ -153,10 +160,12 @@ return [...new Set(a.concat(b))]
         >https://www.codewars.com/kata/573f5c61e7752709df0005d2/train/javascript</a>
         <br></br>
         <br></br>
+        <br></br>
         <h3 className='text-xl font-semibold'>May 2023</h3>
         <br></br>
         <p>Learnt NodeJs, typescript, git and some frameworks such as Jquery, Svelte and Scss.</p>
         <p>Also, relearnt python</p>
+        <br></br>
         <br></br>
         <h3 className='text-xl font-semibold'>August 2023</h3>
         <br></br>
@@ -168,6 +177,7 @@ return [...new Set(a.concat(b))]
         >
         https://www.freecodecamp.org/certification/XavierAndole/javascript-algorithms-and-data-structures
         </a>
+        <br></br>
         <br></br>
         <br></br>
         <h3 className='text-xl font-semibold'>September 2023</h3>
@@ -196,9 +206,13 @@ return [...new Set(a.concat(b))]
         <br></br>
         <p>It's 27th September 2023 and I Got rid of windows and installed Ubuntu. Also started learning linux. I guess I'm a hacker now</p>
         <br></br>
+        <br></br>
         <h3 className='text-xl font-semibold'>October 2023</h3>
         <br></br>
         <p>Got into web2 security. Read various bug bounty and web security books.</p>
+        <br></br>
+        <hr></hr>
+        <br></br>
         <br></br>
         <h3 className='text-xl font-semibold'>January 2024</h3>
         <br></br>
@@ -222,14 +236,17 @@ return [...new Set(a.concat(b))]
         <br></br>
         <img src='./reminder_to_self/Screenshot_2024-02-27_14_55_41.png'></img>
         <br></br>
+        <br></br>
         <h3 className='text-xl font-semibold'>February 2024</h3>
         <br></br>
-        <p>Deployed this static website through vercel. <b>Note: </b> Github pages does not compile React code thus when deployed to github pages, the <span
+        <p>Deployed this static website through vercel.</p>
+        <br></br>
+        <p><b>Note: </b> Github pages does not compile React (JSX) code thus when deployed to github pages, the <span
         className='text-red-400 flex-shrink-0'
         > `Strict : MIME type checking` </span>
          makes the website return a 404 error. 
-        (Github pages does not understand `jsx` code)
-        </p>
+        (Github pages does not understand `jsx` code, only raw HTML)
+        </p> 
         <br></br>
         <p>Started learning web3 and smart contracts with hope to earn as an auditor and bug hunter for both web2 and web3 (22nd February 2024)</p>
         <br></br>
@@ -238,11 +255,20 @@ return [...new Set(a.concat(b))]
         <a className='text-red-400' href='https://updraft.cyfrin.io/' target='_blank'> cyfrin updraft team</a>       . 
         They have helped me learn Solidity, smart contracts and the entire web3 network for free. They are a gem!</p>
         <br></br>
+        <br></br>
         <h3 className='text-xl font-semibold'>March 2024</h3>
         <br></br>
-        <p>Learnt vyper(a smart contract programming language which follows a python-like syntax), smart contract security and read some security reports from 
+        <p>Learnt 
+            <a
+            href='https://learn.vyperlang.org/#/lessons.html'
+            className='hover:underline text-red-400'
+            target="_blank"
+            > vyper
+            </a>
+            ( a smart contract programming language which follows a python-like syntax), smart contract security and read some security reports from 
             <a className='text-red-400' href='https://solodit.xyz' target='_blank'> Solodit.</a></p>
         <br></br>
+        <NextPost />
         </div>
     )
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Snippet from "../../../src/components/snippet";
+import Snippet from "/src/components/snippet";
+import NextPost from "/src/components/nextPost";
 
 function Post3({darkMode}){
     return (
@@ -153,6 +154,7 @@ sudo update-grub
             </a>
             
         </div>
+        <NextPost />
         </>
     )
 }

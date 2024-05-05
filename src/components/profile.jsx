@@ -12,8 +12,7 @@ function Profile({darkMode}){
                 <p className={`text-xl py-3 ${darkMode ? "text-red-700" : ''}`}>Security researcher. I think</p>
                 <p>A train stops at the train station, and a bus stops at the bus station. Well, I have a workstation.</p>
 
-                {/* ADD THE LINKS ANIMATION */}
-            </div>
+             </div>
             <div className="inline my-[30px]">
                 <a target="_blank" rel="noreferrer" href="https://twitter.com/jaarabytes"><i className="fa-brands fa-twitter text-2xl pr-4 hover:text-neon"></i></a>
                 <a target="_blank" rel="noreferrer" href="https://youtu.be/dQw4w9WgXcQ?si=b8rWPl0lqxxSPXWD"><i className="fab fa-youtube text-xl pr-4 hover:text-neon"></i></a>
