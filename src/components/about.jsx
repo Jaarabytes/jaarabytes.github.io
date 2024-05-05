@@ -4,7 +4,7 @@ const About = () => {
         {
             id : "programming-languages",
             type: "Programming languages:",
-            tools: ["Bash, ", "Python, ", ,"Javascript,",  " Solidity", ", Vyper"]
+            tools: ["Bash, ", "Python, ", ,"Javascript,",  " Solidity"]
         },
         {
             id: "technical-skills",

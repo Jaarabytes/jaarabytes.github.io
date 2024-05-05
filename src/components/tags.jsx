@@ -14,6 +14,10 @@ const Tags = ({darkMode}) => {
         {
             "tag" : ["GRUB"],
             "path" : 'grub'
+        },
+        {
+            "tag" : ["secure code review"],
+            "path" : "secure-code-review"
         }
     ];
     // DO THIS, create a tags tab like when you created a posts folder, but for tags but when clicked should redirect to the post

@@ -25,6 +25,13 @@ const PostsTab = ({darkMode}) => {
       path: "minimal-bash-like-error",
       date: "3rd March 2024",
       read: "5 min"
+      },
+      {
+      id:4,
+      header: "Secure code review: Reentrancy attacks",
+      path: "reentrancy-attacks",
+      date: "5th May 2024",
+      read: "7 min"
       }
     ]
     return (

@@ -46,18 +46,13 @@ function Post3({darkMode}){
                 This lists all partitions in your system. Your results should be similar to this: 
             </p>
             <br></br>
-            <div
-            style={{
-                padding: "10px",
-                borderRadius: "10px"
-            }}
-            className="bg-gray-800"
-            >
-            <code>
-            grub&gt; ls <br></br>
-            (hd0) (hd0,msdos5) (hd0,msdos3) (hd0,msdos2) (hd0,msdos1) (hd1) (hd1,msdos1)
-            </code>
-            </div>
+            <Snippet darkMode={darkMode}
+            code={`grub> ls
+(hd0) (hd0,msdos5) (hd0,msdos3) (hd0,msdos2) (hd0,msdos1) (hd1) (hd1,msdos1)
+`
+            }
+            language="Bash"
+            ></Snippet>
             <br></br>
             <br></br>
             <p>Now, we need to find out which partition contains our Linux Operating System so that we can boot from that partition.
@@ -75,27 +70,27 @@ function Post3({darkMode}){
             it is the partition that contains the system files multiple times.
             </p>
             <br></br>
-            <div
-            style={{
-                padding: "10px",
-                borderRadius: "10px"
-            }}
-            className="bg-gray-800"
-            >
-            <code>
-            grub&gt; <b>ls</b> <br></br>
-            #This lists all partitions of your system <br></br>
-            (hd0) (hd0,msdos5) (hd0,msdos3) (hd0,msdos2) (hd0,msdos1) (hd1) (hd1,msdos1)
-            grub&gt; <b>ls (hd0,msdos1)</b><br></br>
-            #Let us assume this is the partition containing the system files <br></br>
-            grub&gt; <b>set root=(hd0,msdos1)</b><br></br>
-            #Setting this particular partition as root <br></br>
-            grub&gt; <b>set prefix=(hd0,msdos1)/boot/grub</b><br></br>
-            #Setting this partition as the prefix <br></br>
-            grub&gt; <b>insmod normal</b><br></br>
-            grub&gt; <b>normal</b><br></br>
-            </code>
-            </div>
+                <Snippet darkMode={darkMode}
+            code={`grub> ls
+#This lists all partitions of your system
+(hd0) (hd0,msdos5) (hd0,msdos3) (hd0,msdos2) (hd0,msdos1) (hd1) (hd1,msdos1)
+
+grub> ls (hd0,msdos1)
+#Let us assume this is the partition containing the system files
+
+grub> set root=(hd0,msdos1)
+#Setting this particular partition as root
+
+grub> set prefix=(hd0,msdos1)/boot/grub
+#Setting this partition as the prefix
+
+grub> insmod normal
+
+grub> normal
+                `
+            }
+            language="Bash"
+            ></Snippet>
             <br></br>
             <p>Basically: </p>
             <br></br>
@@ -129,6 +124,7 @@ sudo grub-install /dev/sda1
 sudo update-grub
                 `
             }
+            language="Bash"
             ></Snippet>
              <br></br>
              <p>For me, I install it in <span
@@ -152,9 +148,11 @@ sudo update-grub
             >
                 https://twitter.com/Known_Mike/status/1553180270815223809
             </a>
-            
+            <br></br>
+            <br></br>
+            <NextPost />
         </div>
-        <NextPost />
+        
         </>
     )
 }

@@ -15,12 +15,11 @@ import Footer from './components/footer';
 import GitTag from '../public/tags/git';
 import LinuxTag from '../public/tags/linux';
 import GrubTag from '../public/tags/grub';
+import Post4 from '../public/posts/reentrancy-attacks/post4';
+import SecureCodeReviewTag from '../public/tags/secureCodeReview';
+// Remember to add a search feature, newsletter feature and image zoomer
 
-// CodeSnippet successfully added, now to sleep
 
-// Remember to add a search feature, newsletter feature and next/previous post feature
-// Next blogpost should be the secure code review, re-entrancy attacks
-// Link it to the seneca protocol, yeah
 function App() {
   // TOGGLING BETWEEN LIGHT AND DARK MODE
   const [darkMode, toggleDarkMode] = useDarkModeToggle();
@@ -38,12 +37,15 @@ function App() {
         <Route path={`/posts/starting-in-tech`} element={<Post1 darkMode={darkMode} />} />
         <Route path={`/posts/git-rid-of-it`} element={<Post2 darkMode={darkMode} />} />
         <Route path={`/posts/minimal-bash-like-error`} element={<Post3 darkMode={darkMode} />} />
+        <Route path={`/posts/reentrancy-attacks`} element={<Post4 darkMode={darkMode} />} />
         {/* JUST LIKE THE ABOVE FOR POST ID, CREATE INDIVIDUAL COMPONENTS AND SUGGEST THEIR PATHWAYS. LATER, YOU MIGHT FIGURE OUT A SHORTCUT */}
+        {/* Yeah, its array.map() you dumbass */}
         <Route path="/about" element={<About darkMode={darkMode} />} />
         <Route path="/tags" element={<Tags darkMode={darkMode} />} />
         <Route path={`/tags/git`} element={<GitTag darkMode={darkMode} />} />
         <Route path={`/tags/grub`} element={<GrubTag darkMode={darkMode} />} />
         <Route path={`/tags/linux`} element={<LinuxTag darkMode={darkMode} />} />
+        <Route path={`/tags/secure-code-review`} element={<SecureCodeReviewTag darkMode={darkMode} />} />
         <Route path="*" element={<Error404 darkMode={darkMode} />} />
       </Routes>
       <Footer />
