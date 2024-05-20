@@ -1,7 +1,7 @@
 // This is the about tab, don't get confused bozo
 
 export default function AboutPage () {
-    const interests = ["infosec (especially web3)", "anime", "Kyle Broslovski", "finance", "and music"]
+    const interests = ["infosec (especially web3)", "anime", "Ludovico Eunadi", "finance", "and Bruce Wayne"]
 
     return (
         <>
@@ -23,6 +23,10 @@ export default function AboutPage () {
         className="hover: underline hover:text-red-400"
         target="_blank"
         >mail me!</a></p>
+        {/* Provide spotify links to proper playlists */}
+        <p>I also enjoy these bangers: </p>
+        <h1>My creations: </h1>
+        {/* Projects go here, add your spotify playlist shh it's storytime */}
         </>
     )
 }
