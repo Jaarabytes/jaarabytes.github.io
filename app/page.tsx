@@ -1,4 +1,4 @@
-
+import Image from "next/image"
 
 
 export default function Home () {
@@ -7,13 +7,27 @@ export default function Home () {
 
   return (
     <>
+      <Image
+       src="/public/profilepic.jpeg"
+        alt="That's literally me (I'm oozing aura)"
+        width={200}
+        height={200}
+        className=""
+        />
       <h1>Xavier</h1>
       <p>Working on da blockchain</p>
-      <a
-      className="hover:underline hover:text-red-400"
-      target="_blank"
-      href="https://twitter.com/jaarabytes"
-      >bird app</a>
+      <div className="block">
+        <a
+        className="hover:underline hover:text-red-400 block"
+        target="_blank"
+        href="https://twitter.com/jaarabytes"
+        >bird app ?</a>
+        <a
+        className="hover:underline hover:text-red-400 block"
+        target="_blank"
+        href="https://github.com/jaarabytes"
+        >you build ?</a>
+      </div>
     </>
   )
 }
