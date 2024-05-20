@@ -1,7 +1,7 @@
 // This is the about tab, don't get confused bozo
 
 export default function AboutPage () {
-    const interests = ["infosec (especially web3)", "anime", "Ludovico Eunadi", "finance", "and Bruce Wayne"]
+    const interests = ["infosec (especially web3)", "anime", "Ludovico Eunadi", "finance", "and The legend of korra"]
 
     return (
         <>
