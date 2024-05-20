@@ -26,7 +26,7 @@ export default function PostsTab () {
                     <span key={index}>{element.date}{index < posts.length && " "}</span>
                     <a
                     className="underline hover:text-red-400"
-                    href={`/${element.path}`}
+                    href={`/posts/${element.path}`}
                     target="_blank"
                     >{element.header}
                     </a>
