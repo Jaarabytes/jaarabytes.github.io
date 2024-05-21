@@ -12,12 +12,13 @@ export default function Home () {
       <div className="mt-5 px-[20%]">
           <Navbar />
           <Image
+          style={{height: "auto", width: "auto",borderRadius: "50%"}}
+          priority
           src="/kurapika.jpg"
             alt="That's literally me (I'm oozing aura)"
             width={200}
             height={200}
             className="items-center inline my-10"
-            style={{borderRadius: "50%"}}
             />
           <h1>Xavier</h1>
           <p className="mb-5">(yes xavier is my real name)</p>
