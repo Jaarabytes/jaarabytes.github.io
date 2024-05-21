@@ -17,12 +17,12 @@ export default function GitRidOfIt () {
         <br></br>
         <br></br>
         {/* Insert the image here */}
-        <img src='./git_rid_of_it/Screenshot_2024-02-26_13_54_28.jpg' className= 'my-5' alt="git error that prompts for authentication"></img>
+        <img src='/git-rid-of-it/Screenshot_2024-02-26_13_54_28.jpg' className= 'my-5' alt="git error that prompts for authentication"></img>
         <p>Well, I have, and I finally figured it out</p>
         <br></br>
         <br></br>
         {/* Insert the nerd gif here */}
-        <img src='./git_rid_of_it/icegif-777.gif' alt="Nerd emoji gif"></img>
+        <img src='/git-rid-of-it/icegif-777.gif' alt="Nerd emoji gif"></img>
         <br></br>
         <p className="text-xl font-extrabold my-5">
         Enough of foreplay, let's get serious.
@@ -41,7 +41,7 @@ export default function GitRidOfIt () {
         <br></br>
         <p>When cloning the preferred github repository, you will have to use the SSH url</p>
         {/* Insert github SSH Url here */}
-        <img  className= 'my-5' src='./git_rid_of_it/Screenshot_2024-02-26_14_57_25.jpg' alt="ssh url clone github repository"></img>
+        <img  className= 'my-5' src='/git-rid-of-it/Screenshot_2024-02-26_14_57_25.jpg' alt="ssh url clone github repository"></img>
         <p>Before that, you have to create a ssh key, which is a private and public key which 
             authenticate you. These keys are tedious and time-consuming to crack.
         </p>
@@ -103,7 +103,7 @@ ssh-add ~/.ssh/id_rsa
         <br></br>
         <br></br>
         <p>Onto the finals where we add the ssh key to our github account:</p>
-        <img className="my-5" src='./git_rid_of_it/Screenshot_2024-02-13_15_47_11.png' alt='github personal account settings'></img>
+        <img className="my-5" src='/git-rid-of-it/Screenshot_2024-02-13_15_47_11.png' alt='github personal account settings'></img>
         <p>Directions to take: </p>
         <br></br>
         <dl>
@@ -116,7 +116,7 @@ ssh-add ~/.ssh/id_rsa
         <br></br>
         <p>This is what you should be pasting in the field: </p>
         <br></br>
-        <img src='./git_rid_of_it/Screenshot_2024-03-01_23_36_05.png'/>
+        <img src='/git-rid-of-it/Screenshot_2024-03-01_23_36_05.png'/>
         <br></br>
         <p>From there on, I believe there will be minimal issues encountered however what if you cloned the repository using the http client
             but now cannot authenticate? Don't fret.
@@ -150,7 +150,7 @@ ssh-add ~/.ssh/id_rsa
         <SyntaxHighlighter  language="Bash" style={dark} code={`sudo apt install gh`} />
         <br></br>
         <br></br>
-        <img src='./git_rid_of_it/Screenshot_2024-03-01_16_01_13.png'></img>
+        <img src='/git-rid-of-it/Screenshot_2024-03-01_16_01_13.png'></img>
         <br></br>
         <p>Remember to input your password since the command uses `sudo` and this requires superuser privileges. I am already running as `root`
             so I do not need to use `sudo`
@@ -165,19 +165,19 @@ ssh-add ~/.ssh/id_rsa
         <SyntaxHighlighter  language="Bash" style={dark} code={`gh auth login`} />
         <br></br>
         <br></br>
-        <img src="./git_rid_of_it/Screenshot_2024-03-01_15_07_37.png"></img>
+        <img src="/git-rid-of-it/Screenshot_2024-03-01_15_07_37.png"></img>
         <br></br>
         <p>You will be asked questions, for which you will answer according to your preference. After answering, you will be 
             given a one time code. Which you will copy then press `Enter` to open your browser and input the one-time code.
         </p>
         <br></br>
-        <img src="./git_rid_of_it/Screenshot_2024-03-01_15_07_50.png"></img>
+        <img src="/git-rid-of-it/Screenshot_2024-03-01_15_07_50.png"></img>
         <br></br>
         <p><b>NOTE: </b>Make sure that you are using a safe network (to prevent you from being hacked). Just use your own mobile phone hotspot.</p>
         <br></br>
         <p>After that you would have successfully logged in and freely access your projects</p>
         <br></br>
-        <img src="./git_rid_of_it/Screenshot_2024-03-01_15_08_06.png"></img>
+        <img src="/git-rid-of-it/Screenshot_2024-03-01_15_08_06.png"></img>
         <br></br>
         <p>If you are a real reader: </p>
         <br></br>       
@@ -187,7 +187,7 @@ ssh-add ~/.ssh/id_rsa
         <p>I prefer the SSH method since it carries less risk though, but that's just me. Stay safe and git to work. </p>
         <br></br>
         {/* Add the dum pun gif */}
-        <img src="./git_rid_of_it/dum-tss.gif" alt="Dum tss gif from gif tenor"></img>
+        <img src="/git-rid-of-it/dum-tss.gif" alt="Dum tss gif from gif tenor"></img>
         <br></br>
         <b>Thanks for reading!</b>
             </div>

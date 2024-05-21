@@ -16,6 +16,7 @@ export default function MinimalBashLikeError () {
                 Minimal bash-like editing is supported. For the first word, TAB listing is possible with possible command completions
                 Anywhere else TAB is used, possible device or file completions are done. ESC anytime exists.
                 </i>
+                <img src="/minimal-bash-like-error/FY3tF38XEAAUiZF.jpeg" className="" alt="" />
                 <p>If you however use Windows, <a
                 href="https://youtu.be/hxOApe1P9dM?si=6YQ8UxzQBNvqPI5c"
                 className="underline hover:text-red-400"
@@ -57,8 +58,13 @@ grub> insmod normal
 
 grub> normal`}>
                 </SyntaxHighlighter>
+                <img src="/minimal-bash-like-error/FY35CpFX0AI88iU.jpeg"></img>
+                <img src="/minimal-bash-like-error/FY35L0XX0AE-fdP.png"></img>
+                <img src="/minimal-bash-like-error/FY35R0fX0AASODJ.png"></img>
                 <p>After regaining access, reinstall and update you grub</p>
-                <p>It is stored in `/boot/grub` for legacy BIOS and `boot/efi/grub` or `/efi/grub` for UEFI</p>
+                <p>It is stored in <span className="text-red-400">`/boot/grub`</span> for legacy BIOS and <span className="text-red-400">`boot/efi/grub`</span> or 
+                <span className="text-red-400">`/efi/grub`</span> for UEFI</p>
+                <img src="/minimal-bash-like-error/FY37XV2WYAIZmB3.jpeg"></img>
                 <p>Install G-parted or gnome disks</p>
                 <SyntaxHighlighter language='bash' style={dark} code={`sudo apt install gparted
 sudo apt install gnome-disk-utility`} />
@@ -66,6 +72,7 @@ sudo apt install gnome-disk-utility`} />
                 <SyntaxHighlighter language='bash' style={dark} code={`sudo grub-install /dev/sdXY
 #X is the disk number and Y is the partition number of EFI
 sudo update grub`} />
+                <img src="/minimal-bash-like-error/FY3-CiPX0AAwol1.jpeg"></img>
                 <p>Reboot your system and confirm if the error persists</p>
                 <p>Further reading: </p>
                 <div>
