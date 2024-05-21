@@ -22,7 +22,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       {/* Add a better sticker tho (from one piece or Kurapika) */}
-      <link rel="icon" type="image/svg+xml" href="./src/assets/pirate-skull-svgrepo-com.svg" />
       <body className={inter.className}>{children}</body>
     </html>
   );
