@@ -22,7 +22,7 @@ export default function GitRidOfIt () {
                 <br></br>
                 <br></br>
                 {/* Insert the nerd gif here */}
-                <img src='/git-rid-of-it/for_cherished_guest.png' alt="Nerd emoji"></img>
+                <img src='/git-rid-of-it/download.png' alt="Nerd emoji"></img>
                 <br></br>
                 <p className="text-xl font-extrabold my-5">
                 Enough of foreplay, let's get serious.
