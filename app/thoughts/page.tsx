@@ -1,5 +1,12 @@
 // This is the thoughts tab, don't get confused bozo
 import Navbar from "@/app/ui/Navbar"
+import { Metadata } from "next"
+
+export const metadata : Metadata = {
+    title : "#thinking"
+}
+
+
 export default function ThoughtsTab () {
     const literature = [{author: "Leo Tolstoy", book: "War and peace"},{author: "David Foster Wallace", book: "Infinite Jest"},
     {author: "Thomas Pynchon", book: "Gravity's rainbow"},{author: "James Joyce", book: "A portrait of the artist as a young man"},
