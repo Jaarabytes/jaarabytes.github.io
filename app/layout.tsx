@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     default: "jaarabytes"
   },
   description: "with love, trenches",
+  metadataBase : new URL("https://next-learn-dashboard.vercel.sh")
 };
 
 export default function RootLayout({

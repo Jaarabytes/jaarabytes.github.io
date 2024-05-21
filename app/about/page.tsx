@@ -1,4 +1,10 @@
 // To be imported to the main page
+import { Metadata } from "next"
+
+export const metadata : Metadata = {
+    title : "about"
+}
+
 export default function AboutPage () {
     const interests = ["infosec (especially web3)","literature", "Attack on titan", "Ludovico Eunadi", "finance", "and The legend of korra"]
     const music = [{link: "https://open.spotify.com/playlist/4sNiUUrxothKlARvtcbjkU?si=5XeFsXNEREaG8RPfRPEL9A&utm_source=copy-link", name: "storytelling"},

@@ -2,13 +2,18 @@ import Image from "next/image"
 import Navbar from "@/app/ui/Navbar"
 import AboutPage from "@/app/about/page"
 
+import { Metadata } from "next"
+
+export const metadata : Metadata = {
+    title : "jaarabytes"
+}
+
 export default function Home () {
 
   return (
     <>
     {/* at posts, add naming git messages */}
     {/* Add a theme song (Hunter x hunter departure or the World deathnote) */}
-    {/* add your about here */}
       <div className="mt-5 px-[20%]">
           <Navbar />
           <Image

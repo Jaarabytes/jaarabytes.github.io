@@ -2,6 +2,12 @@
 
 import Navbar from "@/app/ui/Navbar"
 
+import { Metadata } from "next"
+
+export const metadata : Metadata = {
+    title : "posts"
+}
+
 export default function PostsTab () {
     const posts = [
         {
