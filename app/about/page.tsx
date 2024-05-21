@@ -38,27 +38,27 @@ export default function AboutPage () {
             className="hover: underline hover:text-red-400"
             target="_blank"
             >mail me!</a></p>
-            <p>What i have learned so far is that nothing matters, just do stuff, and if you're scared do it scared! the regret of inaction is always &gt; that of inaction</p>
-            <p>"A ship is safe in harbor, but that's not what ships are for" ~William G.T Shedd</p>
+            <p>What i have learned so far is that nothing matters, just do stuff, and if you&apos;re scared do it scared! the regret of inaction is always &gt; that of inaction</p>
+            <p>&ldquo;A ship is safe in harbor, but that&apos;s not what ships are for&ldquo; ~William G.T Shedd</p>
             <p>Goku faced more and did not give up, what of you?</p>
             <p className="mt-5">🇰🇪🇰🇪🇰🇪🇰🇪 leads Africa in tech</p>
             <p className="mt-5">Good music: </p>
             {music.map((element, index) => (
-                <dl>
-                    <li key={index}><a href={element.link} className="hover:underline hover:text-red-400" target="_blank">{element.name}</a></li>
+                <dl key={index}>
+                    <li><a href={element.link} className="hover:underline hover:text-red-400" target="_blank">{element.name}</a></li>
                 </dl>
             ))}
             <h1 className="mt-5">My creations: </h1>
             {creations.map((element, index) => (
-                <dl>
-                     <li key={index}><a href={element.link} className="hover:underline hover:text-red-400" target="_blank">{element.name}</a></li>
+                <dl key={index}>
+                     <li><a href={element.link} className="hover:underline hover:text-red-400" target="_blank">{element.name}</a></li>
                 </dl>
             ))}
             {/* Add certifications and resume possibly */}
             <p className="mt-5">Motivators (relevant links that are to be studied thoroughly): </p>
             {relevantLinks.map((element, index) => (
-                <dl>
-                     <li key={index}><a href={element.link} className="hover:underline hover:text-red-400" target="_blank">{element.name}</a></li>
+                <dl key={index}>
+                     <li><a href={element.link} className="hover:underline hover:text-red-400" target="_blank">{element.name}</a></li>
                 </dl>
             ))}
             <p className="my-10">there&apos;s a lot left to discover, build and enjoy – feel free to <a href="https://x.com/jaarabytes" 

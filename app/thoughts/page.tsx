@@ -18,7 +18,7 @@ export default function ThoughtsTab () {
                 <Navbar />
                 <h1 className="my-5 text-red-400">#Thinking</h1>
                 <a></a>
-                <p>I'll build an IQ test app, just need a first job</p>
+                <p>I&apos;ll build an IQ test app, just need a first job</p>
                 <p>I like Bruce wayne, i think i want to be just like him</p>
                 <p>I would also like to work at <a
                 href="https://x.com/Pedroais2/status/1790776937947808045"
@@ -27,13 +27,13 @@ export default function ThoughtsTab () {
                 >OpenZeppelin</a></p>
                 <p>How can I honestly say no to that?</p>
                 <p>You should never care about your wakatime, you should be worried about your portfolio</p>
-                <p>How much of it is invested in crypto? if it's &lt;64% you're not gonna make it </p>
+                <p>How much of it is invested in crypto? if it&apos;s &lt;64% you&apos;re not gonna make it </p>
                 {/* Provide links to dantotsu manga app */}
                 <p>You should read The Stranger by Albert Camus</p>
                 <p>enjoy some manga too</p>
-                <p>Literature i'm planning to read: </p>
+                <p>Literature i&apos;m planning to read: </p>
                 {literature.map((element, index) => (
-                    <dl>
+                    <dl key={index}>
                         <li>{element.book} by {element.author}</li>
                     </dl>
                 ))}
