@@ -8,10 +8,9 @@ export const metadata : Metadata = {
 
 
 export default function ThoughtsTab () {
-    const literature = [{author: "Leo Tolstoy", book: "War and peace"},{author: "David Foster Wallace", book: "Infinite Jest"},
-    {author: "Thomas Pynchon", book: "Gravity's rainbow"},{author: "James Joyce", book: "A portrait of the artist as a young man"},
-    {author: "Fitzgerald", book: "Tender is the night"},{author: "Max Gilbert", book: "All quiet on the western front"}]
-
+    const literature = [{author: "Leo Tolstoy", read: false, book: "War and peace"},{author: "David Foster Wallace", read: false, book: "Infinite Jest"},
+    {author: "Thomas Pynchon", read: false, book: "Gravity's rainbow"},{author: "James Joyce", read: false, book: "A portrait of the artist as a young man"},
+    {author: "Fitzgerald", read: false, book: "Tender is the night"},{author: "Max Gilbert", read: true, book: "All quiet on the western front"}]
     return (
         <>
             <div className="mt-5 px-[20%]">
@@ -34,7 +33,8 @@ export default function ThoughtsTab () {
                 <p>Literature i&apos;m planning to read: </p>
                 {literature.map((element, index) => (
                     <dl key={index}>
-                        <li>{element.book} by {element.author}</li>
+                        {!element.read && <li>{element.book} by {element.author}</li>}                        
+                        {element.read && <li className="line-through">{element.book} by {element.author}</li>}
                     </dl>
                 ))}
             </div>
