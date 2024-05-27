@@ -1,6 +1,7 @@
 import Link from "next/link"
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import Image from "next/image";
 
 
 export default function MinimalBashLikeError () {
@@ -16,7 +17,7 @@ export default function MinimalBashLikeError () {
                 Minimal bash-like editing is supported. For the first word, TAB listing is possible with possible command completions
                 Anywhere else TAB is used, possible device or file completions are done. ESC anytime exists.
                 </i>
-                <img src="/minimal-bash-like-error/FY3tF38XEAAUiZF.jpeg"
+                <Image src="/minimal-bash-like-error/FY3tF38XEAAUiZF.jpeg"
                  className="my-5"
                  width={600}
                  height={400}
@@ -27,7 +28,7 @@ export default function MinimalBashLikeError () {
                 target="_blank"
                 >click here</a></p>
                 <h2 className="my-3 font-bold">Cause: </h2>
-                <p><b>Overwritten bootloader: </b>When two partitions exist (windows and linux) one's bootloader may overwrite GRUB </p>
+                <p><b>Overwritten bootloader: </b>When two partitions exist (windows and linux) one&apos;s bootloader may overwrite GRUB </p>
                 <p><b>Accidental deletion: </b>You may have deleted grub configuration files eg <span className="text-red-400">`boot/grub/grub.cfg`</span> </p>
                 <p></p>
                 <h2 className="my-3 font-bold">Solution: </h2>
@@ -45,38 +46,43 @@ export default function MinimalBashLikeError () {
 
                 {/* Add code component here, Thank you, trenches */}
                 <p>Perform the below set of commands for each partition listed: </p>
-                <SyntaxHighlighter language='bash' style={dark} code={`grub> ls
-#This lists all partitions of your system
-(hd0) (hd0,msdos5) (hd0,msdos3) (hd0,msdos2) (hd0,msdos1) (hd1) (hd1,msdos1)
+                <SyntaxHighlighter language='bash' style={dark}>
+                    grub&gt; ls
+                    #This lists all partitions of your system
+                    (hd0) (hd0,msdos5) (hd0,msdos3) (hd0,msdos2) (hd0,msdos1) (hd1) (hd1,msdos1)
 
-grub> ls (hd0,msdos1)
-#Let us assume this is the partition containing the system files
+                    grub&gt; ls (hd0,msdos1)
+                    #Let us assume this is the partition containing the system files
 
-grub> set root=(hd0,msdos1)
-#Setting this particular partition as root
+                    grub&gt; set root=(hd0,msdos1)
+                    #Setting this particular partition as root
 
-grub> set prefix=(hd0,msdos1)/boot/grub
-#Setting this partition as the prefix
+                    grub&gt; set prefix=(hd0,msdos1)/boot/grub
+                    #Setting this partition as the prefix
 
-grub> insmod normal
+                    grub&gt; insmod normal
 
-grub> normal`}>
+                    grub&gt; normal
                 </SyntaxHighlighter>
-                <img src="/minimal-bash-like-error/FY35CpFX0AI88iU.jpeg" className="my-5" width={550} height={300} alt="testing with (hd0)"></img>
-                <img src="/minimal-bash-like-error/FY35L0XX0AE-fdP.png" className="my-5" width={550} height={300} alt="testing with (hd0,gpt3)"></img>
-                <img src="/minimal-bash-like-error/FY35R0fX0AASODJ.png" className="my-5" width={550} height={300} alt="testing with (hd0,gpt2)"></img>
+                <Image src="/minimal-bash-like-error/FY35CpFX0AI88iU.jpeg" className="my-5" width={550} height={300} alt="testing with (hd0)"></Image>
+                <Image src="/minimal-bash-like-error/FY35L0XX0AE-fdP.png" className="my-5" width={550} height={300} alt="testing with (hd0,gpt3)"></Image>
+                <Image src="/minimal-bash-like-error/FY35R0fX0AASODJ.png" className="my-5" width={550} height={300} alt="testing with (hd0,gpt2)"></Image>
                 <p>After regaining access, reinstall and update you grub</p>
                 <p className="mb-5">It is stored in <span className="text-red-400">`/boot/grub`</span> for legacy BIOS and <span className="text-red-400">`boot/efi/grub`</span> or 
                 <span className="text-red-400">`/efi/grub`</span> for UEFI</p>
-                <img src="/minimal-bash-like-error/FY37XV2WYAIZmB3.jpeg"></img>
+                <Image src="/minimal-bash-like-error/FY37XV2WYAIZmB3.jpeg" alt="image showing partitions on disk" width={600} height={400}></Image>
                 <p className="my-5">Install G-parted or gnome disks</p>
-                <SyntaxHighlighter language='bash' style={dark} code={`sudo apt install gparted
-sudo apt install gnome-disk-utility`} />
+                <SyntaxHighlighter language='bash' style={dark}>
+                sudo apt install gparted
+                sudo apt install gnome-disk-utility
+                </SyntaxHighlighter>
                 <p className="my-5">To reinstall and update grub, we run: </p>
-                <SyntaxHighlighter language='bash' style={dark} code={`sudo grub-install /dev/sdXY
-#X is the disk number and Y is the partition number of EFI
-sudo update grub`} />
-                <img src="/minimal-bash-like-error/FY3-CiPX0AAwol1.jpeg"></img>
+                <SyntaxHighlighter language='bash' style={dark}>
+                sudo grub-install /dev/sdXY
+                #X is the disk number and Y is the partition number of EFI
+                sudo update grub
+                </SyntaxHighlighter>
+                <Image src="/minimal-bash-like-error/FY3-CiPX0AAwol1.jpeg" alt="installing and updating grub" width={600} height={400}></Image>
                 <p className="mt-5">Reboot your system and confirm if the error persists</p>
                 <p>Pictures used belong to twitter user <a className="text-red-400" 
                 href="https://twitter.com/known_mike" target="_blank">known_mike</a></p>
