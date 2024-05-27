@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Navbar from "@/app/ui/Navbar"
-import AboutPage from "@/app/about/page"
+import AboutPage from "@/app/ui/About"
 
 import { Metadata } from "next"
 
@@ -39,6 +39,11 @@ export default function Home () {
             target="_blank"
             href="https://github.com/jaarabytes"
             >you build ?</a>
+            <a
+            className="hover:underline hover:text-red-400 block pb-3"
+            target="_self"
+            href={`/about/bananas.mp4`}
+            >what i look like ?</a>
             <hr />
           </div>
           <AboutPage />
