@@ -10,14 +10,16 @@ export const metadata : Metadata = {
 export default function ThoughtsTab () {
     const literature = [{author: "Leo Tolstoy", read: false, book: "War and peace"},{author: "David Foster Wallace", read: false, book: "Infinite Jest"},
     {author: "Thomas Pynchon", read: false, book: "Gravity's rainbow"},{author: "James Joyce", read: false, book: "A portrait of the artist as a young man"},
-    {author: "Fitzgerald", read: false, book: "Tender is the night"},{author: "Max Gilbert", read: true, book: "All quiet on the western front"}]
+    {author: "Fitzgerald", read: false, book: "Tender is the night"},{author: "Max Gilbert", read: true, book: "All quiet on the western front"},
+    {author: "James Joyce", read: false, book: "Finnegan's wake"},{author: "Ernst Junger", read: false, book: "Storm of Steel"}]
     return (
         <>
-            <div className="mt-5 px-[20%]">
+            <div className="mt-5 sm:sm:px-[20%]  px-5 px-5">
                 <Navbar />
                 <h1 className="my-5 text-red-400">#Thinking</h1>
                 <a></a>
                 <p>I&apos;ll build an IQ test app, just need a first job</p>
+                <p>Please finish implementing authentication and database in streamwan</p>
                 <p>I like Bruce wayne, i think i want to be just like him</p>
                 <p>I would also like to work at <a
                 href="https://x.com/Pedroais2/status/1790776937947808045"

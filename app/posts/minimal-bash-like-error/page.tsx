@@ -9,7 +9,7 @@ export default function MinimalBashLikeError () {
 
     return (
         <>
-            <div className="mt-5 px-[20%]">
+            <div className="mt-5 sm:px-[20%] px-5 overflow-hidden">
                 <Link href='/posts' className="underline text-red-400">Posts</Link>
                 <h1 className="text-xl font-bold my-5">Minimal bash like error</h1>
                 <p className="mb-5">Have you ever encountered the below error (it occurs mostly on linux): </p>

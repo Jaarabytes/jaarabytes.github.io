@@ -25,7 +25,7 @@ export default function PostsTab () {
       ]
     return (
         <>
-            <div className="mt-5 px-[20%]">
+            <div className="mt-5 sm:px-[20%]  px-5">
                 <Navbar />
                 <h1 className="text-xl mt-5">Posts: </h1>
                 <p>Some of these posts are problems i have encountered, so i put them here since i forget stuff</p>

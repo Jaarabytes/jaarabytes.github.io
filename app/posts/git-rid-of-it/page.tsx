@@ -8,7 +8,7 @@ export default function GitRidOfIt () {
 // Get rid of that stupid nerd gif, use dingboard
     return (
         <>
-            <div className="mt-5 px-[20%]">
+            <div className="mt-5 sm:px-[20%]  px-5">
                 <Link href='/posts' className="underline text-red-400">Posts</Link>
                 <h1 className="font-bold text-xl my-5">Git rid of it</h1>
                 <p>Have you ever encountered this error before? (Perhaps when cloning a private github repository): </p>
@@ -137,7 +137,10 @@ export default function GitRidOfIt () {
                 <p>More info here :</p>
                 <br></br>
                 <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" className=" text-red-400 truncate" target="_blank">
-                https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+                https://docs.github.com/en/authenti<br />
+                cation/connecting-to-github-with-ssh/gen<br />
+                erating-a-new-ssh-key-and-adding-it<br />
+                -to-the-ssh-agent
                 </a>
                 <br></br>
                 <br></br>
