@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     default: "jaarabytes"
   },
   description: "with love, trenches",
-  metadataBase : new URL("https://next-learn-dashboard.vercel.sh")
+  // metadataBase : new URL("https://next-learn-dashboard.vercel.sh")
 };
 
 export default function RootLayout({
@@ -23,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       {/* Add a better sticker tho (from one piece or Kurapika) */}
+      {/* Added, itachi rocks */}
       <body className={inter.className}>{children}</body>
     </html>
   );
