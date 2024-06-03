@@ -43,24 +43,30 @@ export default function AboutPage () {
             <p>Goku faced more and did not give up, what of you?</p>
             <p className="mt-5">🇰🇪🇰🇪🇰🇪🇰🇪 leads Africa in tech</p>
             <p className="mt-5">Good music: </p>
+            <div className="mx-3">
             {music.map((element, index) => (
-                <dl key={index}>
-                    <li><a href={element.link} className="hover:underline hover:text-red-400" target="_blank">{element.name}</a></li>
-                </dl>
-            ))}
+                    <dl key={index}>
+                        <li><a href={element.link} className="hover:underline hover:text-red-400" target="_blank">{element.name}</a></li>
+                    </dl>
+                ))}
+            </div>
             <h1 className="mt-5">My creations: </h1>
-            {creations.map((element, index) => (
-                <dl key={index}>
-                     <li><a href={element.link} className="hover:underline hover:text-red-400" target="_blank">{element.name}</a></li>
-                </dl>
-            ))}
+            <div className="mx-3">
+                {creations.map((element, index) => (
+                    <dl key={index}>
+                        <li><a href={element.link} className="hover:underline hover:text-red-400" target="_blank">{element.name}</a></li>
+                    </dl>
+                ))}
+            </div>
             {/* Add certifications and resume possibly */}
             <p className="mt-5">Motivators (relevant links that are to be studied thoroughly): </p>
-            {relevantLinks.map((element, index) => (
-                <dl key={index}>
-                     <li><a href={element.link} className="hover:underline hover:text-red-400" target="_blank">{element.name}</a></li>
-                </dl>
-            ))}
+            <div className="mx-2">
+                {relevantLinks.map((element, index) => (
+                    <dl key={index}>
+                        <li><a href={element.link} className="hover:underline hover:text-red-400" target="_blank">{element.name}</a></li>
+                    </dl>
+                ))}
+            </div>
             <p className="my-10">there&apos;s a lot left to discover, build and enjoy – feel free to <a href="https://x.com/jaarabytes" 
             className="text-red-400 underline">message me</a> and say hi if you got this far, I don&apos;t bite (unless angered)</p>
         </>
