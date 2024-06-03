@@ -22,7 +22,7 @@ export default function Home () {
           src="/kurapika.jpg"
             alt="That's literally me (I'm oozing aura)"
             width={200}
-            height={200}
+            height={400}
             className="items-center inline my-10"
             />
           <h1>Xavier</h1>
