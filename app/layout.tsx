@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en">
       {/* Add a better sticker tho (from one piece or Kurapika) */}
       {/* Added, itachi rocks */}
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className} style={{minHeight: "100vh"}}>{children}</body>
     </html>
   );
 }
