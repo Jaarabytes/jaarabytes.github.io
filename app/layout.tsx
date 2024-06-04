@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 // Add a sticker (Kurapika or One piece)
 export const metadata: Metadata = {
   title: {
-    template: "%s, | jaarabytes",
+    template: "%s",
     default: "jaarabytes"
   },
   description: "with love, trenches",
