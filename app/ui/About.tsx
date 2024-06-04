@@ -22,7 +22,7 @@ export default function AboutPage () {
             <h1>About?</h1>
             <p>Hey, I do frontend, little backend and blockchain</p>
             <p>I can fix a printer</p>
-            <p>Other interests include {interests.map((elem, index) => 
+            <p className="my-5">Other interests include {interests.map((elem, index) => 
             <>
             <span key={index}>
                 {elem}
