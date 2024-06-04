@@ -11,25 +11,21 @@ export const metadata : Metadata = {
 export default function PostsTab () {
     const posts = [
         {
-        id:1,
         header: "Git rid of it",
         path: "git-rid-of-it",
         date: "14022024",
         },
         {
-        id:2,
         header: "Minimal bash-like error",
         path: "minimal-bash-like-error",
         date: "03032024",
         },
         {
-        id:3,
         header: "Git pull merge??",
         path: "git-pull-merge",
         date: "03052024",
         },
         {
-        id:4,
         header: "Commit messages",
         path: "commit-messages",
         date: "16052024",
