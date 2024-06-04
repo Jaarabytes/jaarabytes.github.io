@@ -32,9 +32,9 @@ export default function PostsTab () {
                 <div className="pl-5 mt-5">
                     {posts.reverse().map((element, index) => (
                         <>
-                        <dl>
+                        <dl key={index}>
                         <li>
-                        <span key={index}>{element.date}{index < posts.length && " "}</span>
+                        <span>{element.date}{index < posts.length && " "}</span>
                         <a
                         className="underline hover:text-red-400"
                         href={`/posts/${element.path}`}
