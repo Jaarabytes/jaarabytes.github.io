@@ -41,6 +41,11 @@ export default function Home () {
             >you build ?</a>
             <a
             className="hover:underline hover:text-red-400 block pb-3"
+            target="_blank"
+            href="https://calendly.com/jaarabytes"
+            >wanna meet ?</a>
+            <a
+            className="hover:underline hover:text-red-400 block pb-3"
             target="_self"
             href={`/about/bananas.mp4`}
             >what i look like ?</a>
