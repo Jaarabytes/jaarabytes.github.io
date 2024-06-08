@@ -12,7 +12,7 @@ export default function AboutPage () {
                     {link: "https://open.spotify.com/playlist/2qXjPCmMuGRlVDRRFFetAs?si=uy6K2tOpSUedQF8dz16elA&utm_source=copy-link", name: "experience vibes"},
                     {link: "https://open.spotify.com/playlist/4y85MI3qRoui5GPSHWl8Op?si=0og1UeQUQo6fb-9Ds4bMYw&utm_source=copy-link", name: "nostalgia"},
     ]
-    const creations = [{link : "https://streamwan.vercel.app", name: "streamwan"}]
+    const creations = [{link : "https://jipime.vercel.app", name: "jipime (IQ test)"}, {link : "https://streamwan.vercel.app", name: "streamwan"}]
     const relevantLinks = [{link: "https://www.coursera.org/learn/learning-how-to-learn", name: "quick learning"},
         {link: 'https://www.google.com/search?q=A+Mind+For+Numbers%3A+How+to+Excel+at+Math+and+Science&sca_esv=8ee0a4bf7d87b514&sxsrf=ADLYWIJQGPluYmXbjw0mQdbezpn3lPtgwQ%3A1716282706177&ei=UmVMZuCgCqr2i-gPvMqsgAk&ved=0ahUKEwjgkaSos56GAxUq-wIHHTwlC5AQ4dUDCBA&uact=5&oq=A+Mind+For+Numbers%3A+How+to+Excel+at+Math+and+Science&gs_lp=Egxnd3Mtd2l6LXNlcnAiNEEgTWluZCBGb3IgTnVtYmVyczogSG93IHRvIEV4Y2VsIGF0IE1hdGggYW5kIFNjaWVuY2UyBBAjGCcyBBAjGCcyCxAuGIAEGJECGIoFMgUQABiABDIFEAAYgAQyBBAAGB4yCxAAGIAEGIYDGIoFMgsQABiABBiGAxiKBTIIEAAYgAQYogRI5hRQLVi3CHABeAGQAQCYAdcDoAGHEqoBBzItMy4zLjG4AQPIAQD4AQGYAgOgArcEwgIKEAAYsAMY1gQYR8ICBRAuGIAEmAMAiAYBkAYIkgcFMS4wLjKgB9U6&sclient=gws-wiz-serp', name: 'solving math'},
         {link : 'https://x.com/yacineMTB/status/1789787186763530449', name:"yacineMTB W"}
