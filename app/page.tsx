@@ -14,7 +14,7 @@ export default function Home () {
     <>
     {/* at posts, add naming git messages */}
     {/* Add a theme song (Hunter x hunter departure or the World deathnote) */}
-      <div className="mt-5 sm:px-[20%]  px-5">
+      <div className="mt-5 sm:px-[20%] px-5">
           <Navbar />
           <Image
           // style={{height: "auto", width: "auto",borderRadius: "50%"}}
