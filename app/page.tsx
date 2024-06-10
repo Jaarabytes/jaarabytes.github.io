@@ -16,7 +16,7 @@ export default function Home () {
     {/* Add a theme song (Hunter x hunter departure or the World deathnote) */}
       <div className="mt-5 sm:px-[20%] px-5">
           <Navbar />
-          <Image
+          {/* <Image
           // style={{height: "auto", width: "auto",borderRadius: "50%"}}
           priority
           src="/kurapika.jpg"
@@ -24,8 +24,8 @@ export default function Home () {
             width={120}
             height={200}
             className="items-center inline my-10 rounded-full"
-            />
-          <h1>Xavier</h1>
+            /> */}
+          <h1 className="font-extrabold text-3xl my-5">Xavier</h1>
           <p className="mb-5">(yes xavier is my real name)</p>
           <p className="mb-5">Working on da blockchain</p>
           <div className="block mb-5">
