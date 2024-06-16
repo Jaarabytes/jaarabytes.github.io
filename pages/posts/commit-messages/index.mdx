@@ -1,6 +1,5 @@
-[Posts](/posts)
-
-# Git commit messages <br />
+[Posts](/posts)<br /><br />
+# Git commit messages <br /><br />
 I think i love git (ThankYou Linus T)<br />
 
 As a junior dev, you may be surprised when #real engineers write great commit messages yet yours look like garbage (yes, it is garbage)<br />
@@ -8,3 +7,39 @@ As a junior dev, you may be surprised when #real engineers write great commit me
 Here is a simple guide for it:<br />
 
 It should simply involve:<br />
+    1. Subject heading ( less than 50 characters)
+    2. Description (mostly 72 words)
+<br /> 
+Naming conventions:
+        - **chore**: changes that don't affect code functionality eg maintenance tasks such as updating or installing npm packages
+        - **feat**: addition of a new feature to the existing codebase
+        - **refactor**: improving structure of existing code without adding new functions or features
+        - **fix**: when you have fixed existing code bugs or errors
+        - **test**: when your commit has new or modified tests
+        - **docs**: when you change documentation
+        - **style**: when stylistic changes are made to the codebase without affecting functionality
+        - **perf**: when you have improved performance of the codebase
+<br />
+For more naming conventions:<br />
+[https://www.conventionalcommits.org/en/v1.0.0/](https://www.conventionalcommits.org/en/v1.0.0/)<br /><br />
+Examples of messages: (your `git log` should tell a story)<br />
+
+        - **chore: install Stripe**
+        - "install stripe to enable payments"
+        <br />
+        - **style: fix indentition**
+        - "fix indentition throughout the codebase"
+        <br />
+Write commit messages in present form eg `install stripe` not `installed stripe`<br />
+Do this more often, especially with your personal projects (which you will never finish)<br />
+Also install [gitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) VSCode extension, [lazygit](https://github.com/jesseduffield/lazygit) for efficiency.<br />
+Gitlens:<br /><br />
+![picture of gitLens extension in action](/commit-messages/gitlens.png)
+<br /><br />Lazygit (it's better i promise):<br /><br />
+![lazygit is awesome](/thoughts/Screenshot_2024-06-16_21_54_29.png)
+<br /><br />Your git log should look like this: <br /><br />
+![git log of commit messages](/commit-messages/Screenshot_2024-06-04_11_59_10.png)
+<br /><br />Here is a great example:
+[https://x.com/ronnieonly/status/1790799389578944813](https://x.com/ronnieonly/status/1790799389578944813)
+
+
