@@ -9,11 +9,11 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @apply text-red-400;
+  @apply text-purple-400;
 }
 
 a {
-  @apply text-blue-400;
+  @apply text-red-400;
 }
 
 code {
