@@ -1,5 +1,46 @@
-[Posts](/posts)
+[Posts](/posts)<br /><br />
 # Git auth <br /> <br />
 
-Remember when we authenticated github on our shell using ssh keys? Well, imagine if you authenticated both your personal and work keys in your PC and you have projects belonging to each account
+Remember when we authenticated github on our shell using ssh keys? [Remember ?](/posts/git-rid-of-it) Well, imagine if you authenticated both your
+personal and work keys in your PC and you have projects belonging to each account
 which need to be worked on. Here is how to fix it: <br />
+Specify the path to your private key file when using the ssh command. Like this: <br /><br />
+```
+ssh -T -i ~/.ssh/id_rsa_account1 git@github.com  # For account 1
+ssh -T -i ~/.ssh/id_rsa_account2 git@github.com  # For account 2
+```
+<br />
+Replace the file names with actual paths to your private key files.
+Mine are `id_rsa` for [Jaarabytes](https://github.com/jaarabytes) and `hi` for [xh3rking](https://github.com/xh3rking)<br /><br />
+{/* Don't forget to crop images and insert them here */}
+![authentication conquered](/git-auth/Screenshot_2024-06-16_22_13_22.png)
+<br /><br />
+Also, (this is a long stretch) but you can also do the following,<br />
+Update remote urls for the repositories, for the personal repository:
+```
+git remote set-url origin git@github.com-personal:username/repository.git
+```
+<br />
+for the work repository:
+```
+git remote set-url origin git@github.com-work:username/repository.git
+```
+<br />
+Then verify the configuration, for personal account:
+```
+git clone git@github.com-personal:username/repository.git
+```
+<br />
+for the work repository:
+```
+git clone git@github.com-work:username/repository.git
+```
+<br />
+If errors are encountered, you can debug by running:
+```
+ssh -vT git@github.com-personal
+ssh -vT git@github.com-work
+```
+<br />
+The commands above give a verbose output on the ssh connections being made. Good luck, you will need it. I mean look at this, <br /><br />
+![stupid ssh](/git-auth/Screenshot_2024-06-16_22_29_16.png)
