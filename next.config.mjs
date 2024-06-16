@@ -1,12 +1,13 @@
-/** @type {import('next').NextConfig} */
-const withMDX = require('@next/mdx')()
- 
-/** @type {import('next').NextConfig} */
+// next.config.mjs
+import withMDX from '@next/mdx';
+
+const mdxConfig = withMDX({
+  extension: /\.mdx?$/,
+});
+
 const nextConfig = {
-  // Configure `pageExtensions` to include MDX files
-  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
-  // Optionally, add any other Next.js config below
-}
- 
-module.exports = withMDX(nextConfig)
-export default nextConfig;
+  // Other Next.js configurations here...
+  pageExtensions: ['js', 'jsx', 'md', 'mdx'],
+};
+
+export default mdxConfig(nextConfig);
