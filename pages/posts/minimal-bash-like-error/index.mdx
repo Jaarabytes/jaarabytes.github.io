@@ -1,0 +1,66 @@
+[Posts](/posts)<br /><br />
+# Minimal bash like error
+
+    Have you ever encountered the below error (it occurs mostly on linux): <br />
+    
+    _Minimal bash-like editing is supported. For the first word, TAB listing is possible with possible command completions
+    Anywhere else TAB is used, possible device or file completions are done. ESC anytime exists._ <br /><br />
+    
+    ![minimal bash like error message on laptop screen](/minimal-bash-like-error/FY3tF38XEAAUiZF.jpeg)
+    <br /><br />
+    If you however use Windows, [click here](https://youtu.be/hxOApe1P9dM?si=6YQ8UxzQBNvqPI5c)
+    Cause: 
+    <b>Overwritten bootloader: </b>When two partitions exist (windows and linux) one's bootloader may overwrite GRUB 
+    <b>Accidental deletion: </b>You may have deleted grub configuration files eg `boot/grub/grub.cfg` 
+    
+    ## Solution:
+    <b>GRUB</b> GRand Unified Bootloader is responsible for showing you selection of Operating system after booting
+    ### What to do?
+        * Find the partition containing linux
+        * Set it as root and prefix
+    ** Sidenote: ** root variable partitions are where the entire operating system is installed and 
+    prefix variable partitions are where GRUB is installed.
+
+    Perform the below set of commands for each partition listed:
+    ```
+    grub> ls
+    #This lists all partitions of your system
+    (hd0) (hd0,msdos5) (hd0,msdos3) (hd0,msdos2) (hd0,msdos1) (hd1) (hd1,msdos1)
+
+    grub> ls (hd0,msdos1)
+    #Let us assume this is the partition containing the system files
+
+    grub> set root=(hd0,msdos1)
+    #Setting this particular partition as root
+
+    grub> set prefix=(hd0,msdos1)/boot/grub
+    #Setting this partition as the prefix
+
+    grub> insmod normal
+
+    grub> normal
+    ```
+    ![testing with (hd0)](/minimal-bash-like-error/FY35CpFX0AI88iU.jpeg)
+    ![testing with (hd0,gpt3)](/minimal-bash-like-error/FY35L0XX0AE-fdP.png)
+    ![testing with (hd0,gpt2)](/minimal-bash-like-error/FY35R0fX0AASODJ.png)
+    After regaining access, reinstall and update you grub
+    It is stored in <span className="text-red-400">`/boot/grub`</span> for legacy BIOS and <span className="text-red-400">`boot/efi/grub`</span> or 
+    `/efi/grub` for UEFI
+    ![image showing partitions on disk](/minimal-bash-like-error/FY37XV2WYAIZmB3.jpeg)
+    Install G-parted or gnome disks
+    ```
+    sudo apt install gparted
+    sudo apt install gnome-disk-utility
+    ```
+    To reinstall and update grub, we run: 
+    ```
+    sudo grub-install /dev/sdXY
+    #X is the disk number and Y is the partition number of EFI
+    sudo update grub
+    ```
+    ![installing and updating grub](/minimal-bash-like-error/FY3-CiPX0AAwol1.jpeg)
+    Reboot your system and confirm if the error persists
+    Pictures used belong to twitter user
+    [@known_mike](https://twitter.com/known_mike)
+    Further reading: 
+        [https://twitter.com/Known_Mike/status/1553180270815223809](https://twitter.com/Known_Mike/status/1553180270815223809)
