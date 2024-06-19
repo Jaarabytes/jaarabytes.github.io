@@ -1,0 +1,24 @@
+name: CI/CD Pipeline
+on: 
+  push: 
+    branches : [main, master]
+
+jobs: 
+  build-and-deploy: 
+    runs-on: ubuntu-latest
+
+    steps: 
+      - name : checkout code 
+        uses: actions/checkout@v3
+
+      - name: Set up docker
+        uses: docker-practice/actions-setup-docker@master
+
+      - name: Build docker image
+        run: docker build -t yapfolio .
+
+      - name: Publish to vercel
+        env: 
+          VERCEL_TOKEN : ${{ secrets.VERCEL_TOKEN }}
+        run: docker save yapfolio | vercel deploy --prod --confirm --docker --no-inspect --token=$VERCEL_TOKEN
+        
