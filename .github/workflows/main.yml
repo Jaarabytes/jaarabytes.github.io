@@ -15,7 +15,9 @@ jobs:
         uses: docker-practice/actions-setup-docker@master
 
       - name: Build docker image
-        run: docker build -t yapfolio .
+        run: | 
+        docker build -t jaarabytes/yapfolio .
+        docker push jaarabytes/yapfolio
 
       - name: Publish to vercel
         env: 
