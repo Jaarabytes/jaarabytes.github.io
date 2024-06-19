@@ -20,5 +20,6 @@ jobs:
       - name: Publish to vercel
         env: 
           VERCEL_TOKEN : ${{ secrets.VERCEL_TOKEN }}
-        run: docker save yapfolio | vercel deploy --prod --confirm --docker --no-inspect --token=$VERCEL_TOKEN
+          DOCKER_IMAGE_NAME : ${{ secrets.DOCKER_IMAGE_NAME }}
+        run: docker save yapfolio | vercel deploy --prod --confirm --docker --no-inspect --token=$VERCEL_TOKEN $DOCKER_IMAGE_NAME
         
