@@ -17,7 +17,7 @@ const PlayButton: React.FC = () => {
     <div className="fixed bottom-4 right-4">
       <button
         onClick={togglePlay}
-        className="px-6 py-2 bg-blue-500 text-white rounded text-xs"
+        className="px-6 py-2 bg-blue-500 text-white rounded animate-pulse-slow"
       >
         <FaMusic className="text-3xl" />
         {/* 30 seconds is little, make it 50 seconds or 1 minute */}
