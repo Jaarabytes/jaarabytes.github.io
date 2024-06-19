@@ -19,8 +19,8 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          docker build -t your-docker-hub-username/my-next-app .
-          docker push your-docker-hub-username/my-next-app
+          docker build -t your-docker-hub-username/yapfolio .
+          docker push your-docker-hub-username/yapfolio
 
       - name: Publish to vercel
         env: 
