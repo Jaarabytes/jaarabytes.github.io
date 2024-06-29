@@ -7,7 +7,7 @@ export default function Donate () {
     const config = {
         reference: (new Date()).getTime().toString(),
         email: "xh3rking96@gmail.com", 
-        amount: amount,
+        amount: amount * 100,
         publicKey: 'pk_live_9999378c83331abc0c642f96d2457a5f88969934',
         currency: 'KES'
         }
@@ -17,7 +17,7 @@ export default function Donate () {
             <>
                 <div className='text-center my-5' style={{minHeight: '100vh'}}>  
                     <h1 className='text-2xl font-bold my-5'>Thank you for donating anon!</h1>
-                    <label>Amount</label>
+                    <label>Amount (in KES)</label>
                     <br /><br />
                     <input className='text-center rounded-sm text-black py-3' value={amount} onChange={(e) => setAmount(Number(e.target.value))} />
                     <br /><br />
