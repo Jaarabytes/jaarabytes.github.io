@@ -22,7 +22,7 @@ const PlayButton: React.FC = () => {
         <FaMusic className="text-3xl" />
         {/* 30 seconds is little, make it 50 seconds or 1 minute */}
         {/* The song is Love me again by John Newman, it's the FIFA 14 Theme song */}
-        <p className='py-2'>{playing ? 'Pause' : 'Play!'}</p>
+        <p className='py-2'>{playing ? 'Stop!' : 'Play!'}</p>
       </button>
       <audio ref={audioRef} src="/real.mp3" loop />
     </div>
