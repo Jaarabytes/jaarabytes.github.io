@@ -33,7 +33,7 @@ a {
 }
 
 li {
-  @apply pl-3;
+  @apply pl-3 break-words;
 }
 code {
   @apply bg-gray-800 text-yellow-300 px-1 rounded;
