@@ -29,7 +29,7 @@ img {
 }
 
 a {
-  @apply text-red-400;
+  @apply text-red-400 break-words;
 }
 
 li {
