@@ -1,0 +1,45 @@
+[Posts](/posts)<br /><br />
+# Configgg <br /><br />
+As a linux fanboy and breaking it multiple times, I discovered that it would be easier to create scripts that install my default setup on any computer worldwide<br />
+
+Throughout 2024, I used multiple distros including:
+    - Parrot
+    - Debian.
+    - Nix OS. (The best linux distro so far)
+    - Endeavor OS (a fork of Arch Linux)
+
+
+## Nix, a brave new world
+
+Most linux distros I had installed would normally crash, especially when it would either fail to mount my root disk or even fail to bring about the login page (ubuntu and debian, i am soooo mad)
+I installed nix and took some time to learn about it. It's so efficient that it doesn't deserve to be held hostage by the linux community.
+<br/>
+It involves mainly two files:
+    - **configuration.nix** : Contains all programs you have installed and all modification you require.
+    - **hardware-configuration.nix**: Not to be messed with (learnt the hard way), but is created by default and involves the hardware configuration for your nix system
+<br/>
+Not only does nix allow you to install specific programs in your machine at specific versions but also allows you to rollback into previous versions of your machine in case your current one breaks.
+I mean how great is that. 
+<br/>
+My dotfiles: [https://github.com/Jaarabytes/dotfiles](https://github.com/Jaarabytes/dotfiles)
+
+
+## Endeavor Os
+### (Arch but with extra steps)
+
+Endeavor OS is where I enjoyed most of my configurations especially since it is somewhat minimal. I loved it since it was just Arch Linux but with everything installed. Through it, I got to
+experience terminals such as Alacritty, Kitty , shells such as fish and oh my zsh. I really got more efficient by adding more tools into my workflow such as lazygit, eza, batcat among others.
+<br/>
+Not only did I enjoy those, I also had a run with some window managers such as Ragnar, i3 (minimal and very fast) and Hyprland (the best so far). Throughout my development arc, I loved all of them
+
+
+## Creating DotHub
+
+After creating multiple configuration files, I realized that most noobs can't create configuration files by themselves, however they do need a default template based on their hardware.
+Since my personal configurations were uploaded to github, i realised that other programmers have uploaded theirs too! Why stop there, there are configuration files on other hosts such as
+gitlab and codeberg. 
+<br/>
+I proceeded to learn about their respective APIs and proceeded to create a centralised area where people could see other people's configurations, filter them out , rank them through their 
+popularity, stars or date released. I however wish I had capital for a VPS such that I could leave a bash script running which could update DotHub every hour [Enjoy!](https://dothub.vercel.app)
+<br/>
+If you do however have any ideas, please contact me or even submit a [PR](https://github.com/Jaarabytes/dothub)

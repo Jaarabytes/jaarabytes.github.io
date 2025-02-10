@@ -1,0 +1,121 @@
+[Posts](/posts)<br /><br />
+# Creating Jipime <br /><br />
+Generally, I love tests since they give you the ability to somewhat (but not accurately) gauge yourself<br />
+
+<br/>
+Throughout March to May 2024, I took [multiple quasi online IQ tests](https://jipime.netlify.app/real) and learnt the following:<br />
+    - Nature of questions asked.
+    - Choice of answers.
+    - Calculation methods (IQ valuation).
+<br/ >
+Being inspired by them and realizing that I am blesssed with the power to build, I decided why not just build my personal IQ test and even ask my friends to do it.<br />
+<br />
+Through a little bit of typescript and a dash of tailwind css, I built a simple fun app that tests user's mental capabilities.
+<br/ >
+Technologies used (doesn't matter):
+    - Frontend: ReactJS
+    - Backend: Typescript
+    - Database: Redis instance (formerly used MongoDb)
+
+## How the website works
+
+When you open it and select an age group, it creates a random user ID (hash of the current timestamp). All test scores are stored as an object on a redis instance (chosen due to 
+speed and MongoDb would lag at times). The userID is stored on the browser as a session Cookie so that the test can be done multiple times.
+
+Here is an example: 
+
+```
+{
+    userID: 2iddjm0d3j9,
+    TestOne: 8,
+    TestTwo: 4,
+    TestThree: 3
+
+}
+```
+
+I only faced two hurdles here: IQ calculation and coming up with questions.
+
+## Coming up with questions
+
+I figured out that one of the human brain's default capabilities is binary thinking (yes or no, true or false, potato or tomato), therefore  I made sure that the first part
+of the test would include such. The questions here are geared to make the user lean into trusting their gut thus picking the wong answer (see, i spelt wrong 
+incorrectly but you read it right since you trust your gut).
+
+<br/>
+Since most of my peers grew up with the internet and suffer a small attention spans, I made sure that the first part would be fast and the user would get 
+their results immediately and continues with their activities. 
+<br/>
+Also, both True and False options are equal (Five questions are true, the other five are false)
+<br/>
+The second part also involves binary thinking methods however it is a bit different since it involves questions from mathematics and imagery (not just critical thinking like those from part one).
+<br/>
+I mean, look at this sample question (I'm sure you can do it)
+
+
+```
+Jake needs 16 bottles of water from the store. John can only carry 3 at a time. The minimum number of trips John makes is thus 6?
+
+# True. 
+Trip 1 - 3
+Trip 2 - 3
+Trip 3 - 3
+Trip 4 - 3
+Trip 5 - 3
+Trip 6 - 1 +
+---------------
+Total - 16
+```
+
+The last part involves vocabulary, idioms and grammar use (My condolences to all Non English speakers, as this part somewhat nullifies your previous efforts).
+
+### Explaining the Math used
+
+Out of 10 questions asked, the average user should score only five or seven. 
+<br/>
+Basic definitions: 
+    - [Mean/ average](https://en.wikipedia.org/wiki/Mean): The most normal thing you ordinarily see.
+    - [Standard deviation](https://en.wikipedia.org/wiki/Standard_deviation): The more one is far from normal, the higher standard deviation is.
+    - [Z score](https://en.wikipedia.org/wiki/Standard_score): Number of standard deviations a raw or given score is far or close to the mean
+<br/>
+Here is an example:
+<br/>
+Let's say the average height of women is 5'4" (64 inches) with a standard deviation of 2 inches.  If a woman is 5'6" (66 inches) tall, her z-score is:
+
+```
+z = (66 - 64) / 2 = 1
+```
+
+Now, to calcuate percentile I used the below formula:
+```
+(1 + erf(zScore / Math.sqrt(2))) / 2 * 100
+```
+The erf gives the area under the normal distribution curve. Generally, the above formula expresses probability as a percentage.
+
+
+Proceeding to calcuate IQ:
+
+```
+zScore = (rawScore - meanScore) / sdScore
+```
+
+Note: 
+<br/>
+    - zScore: your total tests score out of 29
+    - meanScore: 100
+    - sdScore: 15
+    - starterIQ: +2 if your age range if below 16 and above 60, other ages get 0
+<br/>
+Finally:
+```
+Math.round(100 + zScore * 15 + starterIQ)
+```
+
+The server sends the percentile and IQ as a JSON object to the frontend therefore delivering results.
+The percentile is also used to rank the user out of 1000 people.<br/>
+
+
+If you do however have any ideas, please contact me or even submit a [PR](https://github.com/Jaarabytes/jipime)
+
+<br/>
+THANK you for reading!
