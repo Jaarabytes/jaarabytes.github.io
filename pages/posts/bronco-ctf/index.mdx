@@ -1,0 +1,23 @@
+# Bronco CTF
+
+Over the weekend 15th to 16th February 2025, [Bronco CTF](https://ctftime.org/ctf/1017/) was held however I got a very late notification and could only participate for one and a half hour. During this limited time, I only solved one web based challenge. 
+
+Let's dive in
+
+## Grandma's little recipe
+
+The challenge seems quite simple really; you are supposed to login as grandma and access her secret recipe however the website doesn't allow you to, it only logs you in as a kitchen helper.
+
+Onto checking the authentication mechanism, I realised the website provides you with a cookie and a hash which act as identification. I tried to change the value of the cookie from **kitchen helper** to **grandma** but I still wasn't allowed access to grandma's recipe.
+
+![Screenshot at 2025-02-16 23-07-29.png](/bronco-ctf/Screenshot%20at%202025-02-16%2023-07-29.png)
+
+That's when it hit me that the hash was unchanged. Heading onto [Cyberchef](https://gchq.github.io/CyberChef/) I checked on what the hash value could be. It was an MD5 hash. Therefore, I tested my suspicions by inserting the MD5 hash of the word **"grandma"** and the cookie with the role **"grandma"**. 
+![Screenshot at 2025-02-16 23-07-17.png](/bronco-ctf/Screenshot%20at%202025-02-16%2023-07-17.png)
+
+HOORAY!! Got the flag
+
+![Screenshot at 2025-02-16 23-07-09.png](/bronco-ctf/Screenshot%20at%202025-02-16%2023-07-09.png)
+
+Other writeups are here:
+[https://github.com/SCUBroncoSec/BroncoCTF-2025-Public](https://github.com/SCUBroncoSec/BroncoCTF-2025-Public)
