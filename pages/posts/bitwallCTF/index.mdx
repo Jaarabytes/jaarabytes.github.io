@@ -1,0 +1,70 @@
+# BitWall CTF
+
+From 2nd to 4th May, Bitwall/ Bitsiege CTF occurred in which I participated and tackled a few challenges. Let's dive in.
+
+Since the server belonging to the website is not working, I'll have to give vague descriptions of the challenges.
+
+## Cryptography
+
+### Fr33 Fl4g
+
+This was a great challenge since I was the first one to solve it.
+I'm sure that other competitors failed to solve it early on since they never met such encoding/encryption before.
+
+![Information on Fr33 flag](/bitwallCTF/Screenshot%20at%202025-05-02%2020-38-17.png)
+
+I too never did, but dealt with it on another CTF just a few days ago! [Cybergame](https://cybergame.sk).
+
+All one had to do is perform a ROT13 brute force on the text provided (ROT13 with 9 rotations provides Roman numerals), then convert the Roman Numerals to text. I used [Cryptii.com](https://v2.cryptii.com/roman-numerals/text)
+
+![To roman numerals](/bitwallCTF/Screenshot%20at%202025-05-02%2020-38-29.png)
+
+![Flag reveal](/bitwallCTF/Screenshot%20at%202025-05-02%2020-38-23.png)
+
+
+## Forensics
+
+### Silent Supernova series
+
+It involves downloading a malicious Microsoft word document and performing some forensics on it.
+
+#### 1
+
+For the first level, all we had to do is to check the sha256sum hash of the file, as shown below.
+
+![Challenge description](/bitwallCTF/Screenshot%20at%202025-05-02%2021-18-30.png)
+
+```
+sha256sum Kakwa.doc
+```
+![Hash obtained!](/bitwallCTF/Screenshot%20at%202025-05-02%2021-18-35.png)
+
+
+#### 2
+For the second level, it specifically asked for the file's size but in bytes
+
+This can be done through:
+
+```
+stat -c %s Kakwa.doc
+```
+
+![File size](/bitwallCTF/Screenshot%20at%202025-05-02%2021-21-58.png)
+
+## Random
+
+### Rules
+
+The description was for one to head for the website's rules page and look for anything not normal.
+
+On checking the source code for the page, we get to see some HTML comment on what appears to be base64 encoded writing
+
+![Comment reveal](/bitwallCTF/Screenshot%20at%202025-05-02%2022-17-12.png)
+
+Headed onto [Cyberchef](https://cyberchef.org), decoded and obtained the flag!
+
+![Flag obtained](/bitwallCTF/Screenshot%20at%202025-05-02%2022-17-38.png)
+
+I could have solved even more challenges however I had limited time!
+
+Thank you for reading!
