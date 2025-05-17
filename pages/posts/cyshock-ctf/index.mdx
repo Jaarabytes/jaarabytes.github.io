@@ -1,0 +1,55 @@
+# Cyshock CTF
+
+On the quest for knowledge, I participated in Cyshock CTF which was on during 14th to 16th May.
+
+I did not get to solve that many challenges since they were quite challenging.
+
+Let's dig in. 
+
+## Web
+
+### An alarming site
+
+Provided is a [link](cyshock-ch2.chals.io) through which one is to interact with the website. On typing help i got the list of commands but the command `ping` looked at me curiously since it was the only one which accepted user input.
+
+![Challenge description](/cyshock-ctf/Screenshot%20at%202025-05-16%2013-39-13.png)
+
+I tried to ping `google.com` and it worked. I proceeded to perform a custom XSS payload and it somewhat worked.
+
+The payload:
+
+```
+<img src=x onerror=alert(1)>
+```
+
+On trying it while using brave browser, it got this popup
+
+![Brave browser popup](/cyshock-ctf/Screenshot%20at%202025-05-16%2013-26-52.png)
+
+After the CTF ended and writeups released, I was told that the payload is correct however I had to use firefox browser or change the user-agent. On trying this on Librewolf (privacy focused alternative to firefox), it absolutely works and got the flag
+
+
+![Flag found](/cyshock-ctf/Screenshot%20at%202025-05-16%2013-27-38.png)
+
+
+Flag: `CYSAT{hunt_within_me}`
+
+
+
+## Misc
+
+### A new song
+
+Attached is a [WAV file](https://cyshock.ctfd.io/files/c2c436ce4feb4fd444ba32b780633543/chall.wav?token=eyJ1c2VyX2lkIjo5OTMsInRlYW1faWQiOjYyMSwiZmlsZV9pZCI6MjF9.aCcQSg.SI3nZwonx_53xY8rOr_-s90LAMg). On hearing the wav file, it seemed like morse code.
+
+![Challenge description](/cyshock-ctf/Screenshot%20at%202025-05-15%2017-25-50.png)
+
+I proceeded to upload it to [morse code world](https://morsecode.world) from which as seen on the attached image below, I obtained the flag.
+
+![Flag found!](/cyshock-ctf/Screenshot%20at%202025-05-15%2017-24-44.png)
+
+Flag: `CYSAT{TAKE_TO_THE_SKY}`
+
+
+
+Thank you!!!
